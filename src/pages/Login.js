@@ -31,14 +31,14 @@ const Login = () => {
           <hr class="mb-10 h-1 w-full" />
           <div class="flex items-center justify-center">
             <body>
-              <div class="mb-2 text-[22px] font-semibold">
+              <div class="mb-2 flex text-[22px] font-semibold">
                 고객님의 정보를 입력해주세요.
               </div>
-              <div class="mb-10 text-sm font-normal text-[#878682]">
+              <div class="mb-10 flex text-sm font-normal text-[#878682]">
                 고객님이 입력하신 정보는 챗봇 정보를 불러올 수 있습니다.
               </div>
-              <div class="mb-1 text-base font-semibold">이름</div>
-              <div class="mb-3 text-sm font-normal text-[#878682]">
+              <div class="mb-1 flex text-base font-semibold">이름</div>
+              <div class="mb-3 flex text-sm font-normal text-[#878682]">
                 상담을 진행하기 위해서 고객님의 이름이 필요합니다.
               </div>
               <input
@@ -49,8 +49,8 @@ const Login = () => {
                 // autoFocus
                 class="h-10 w-[480px] rounded-lg border border-[#D1D0CC] bg-[#F4F3F1] p-3 text-sm font-normal text-[#878682]"
               />
-              <div class="mb-1 mt-3 text-base font-semibold">연락처</div>
-              <div class="mb-3 text-sm font-normal text-[#878682]">
+              <div class="mb-1 mt-3 flex text-base font-semibold">연락처</div>
+              <div class="mb-3 flex text-sm font-normal text-[#878682]">
                 상담사가 답변을 주면 문자메세지로 알려드리겠습니다.
               </div>
               <input
@@ -61,7 +61,7 @@ const Login = () => {
                 // autoFocus
                 class="h-10 w-[480px] rounded-lg border border-[#D1D0CC] bg-[#F4F3F1] p-3 text-sm font-normal text-[#878682]"
               />
-              <div class="mt-4 text-sm font-normal text-[#878682] underline ">
+              <div class="mt-4 flex text-sm font-normal text-[#878682] underline ">
                 관리자 로그인하기{" "}
               </div>
             </body>
