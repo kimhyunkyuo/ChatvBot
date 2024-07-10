@@ -1,3 +1,5 @@
+import React from "react";
+
 class ActionProvider {
   constructor(createChatBotMessage, setState, createClientMessage) {
     this.createChatBotMessage = createChatBotMessage;

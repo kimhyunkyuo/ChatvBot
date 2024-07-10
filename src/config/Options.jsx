@@ -1,10 +1,11 @@
+// Options.jsx
 import React from "react";
 
 const Options = (props) => {
   const optionsMarkup = props.options.map((option) => (
     <button
-      key={option.value}
-      onClick={() => props.triggerNextStep({ value: option.value })}
+      key={option.id}
+      onClick={() => option.handler(props)}
       style={{
         margin: "5px",
         padding: "10px",
@@ -15,7 +16,7 @@ const Options = (props) => {
         cursor: "pointer",
       }}
     >
-      {option.label}
+      {option.text}
     </button>
   ));
 
