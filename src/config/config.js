@@ -53,21 +53,12 @@ const config = {
     {
       widgetName: "optionsWidget",
       widgetFunc: (props) => <Options {...props} />,
-      props: {
-        options: [
-          {
-            text: "퀵 가이드",
-            handler: (props) => props.actionProvider.handleOption("퀵 가이드"),
-            id: 1,
-          },
-          {
-            text: "인터넷 보험 상품 목록",
-            handler: (props) =>
-              props.actionProvider.handleOption("인터넷 보험 상품 목록"),
-            id: 2,
-          },
-        ],
-      },
+    },
+    {
+      widgetName: "quickGuide",
+      widgetFunc: (props) => (
+        <CustomMessage {...props} messageType="quickGuide" />
+      ),
     },
   ],
   customStyles: {

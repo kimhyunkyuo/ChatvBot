@@ -5,6 +5,7 @@ const CustomInput = (props) => {
   return (
     <div
       style={{
+        position: "fixed",
         display: "flex",
         alignItems: "center",
         backgroundColor: "lightyellow",
@@ -12,6 +13,7 @@ const CustomInput = (props) => {
         borderRadius: "10px",
         width: "40px",
         height: "40px",
+        zIndex: "21",
       }}
     >
       <input

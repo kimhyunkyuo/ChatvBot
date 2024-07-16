@@ -1,18 +1,21 @@
-import React from "react";
-
 class ActionProvider {
-  constructor(createChatBotMessage, setState, createClientMessage) {
+  constructor(createChatBotMessage, setStateFunc) {
     this.createChatBotMessage = createChatBotMessage;
-    this.setState = setState;
-    this.createClientMessage = createClientMessage;
+    this.setState = setStateFunc;
   }
 
-  handleOption = (option) => {
-    const message = this.createChatBotMessage(`You selected ${option}`);
-    this.setChatbotMessage(message);
-  };
+  handleQuickGuide = () => {
+    const message = this.createChatBotMessage(
+      "Quick Guidee",
+      {
+        widget: "quickGuide",
+      },
+      {
+        custom: true,
+        messageType: "quickGuide",
+      },
+    );
 
-  setChatbotMessage = (message) => {
     this.setState((prev) => ({
       ...prev,
       messages: [...prev.messages, message],
