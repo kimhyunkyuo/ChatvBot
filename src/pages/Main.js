@@ -28,7 +28,7 @@ const Main = () => {
               <img src={close_icon} />
             </button>
           </header>
-          <hr class="mb-10 h-1 w-full" />
+          <hr class="mb-[-3px] h-1 w-full" />
           <MyChatBot />
         </div>
       </div>

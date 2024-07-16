@@ -8,11 +8,13 @@ const Options = (props) => {
       onClick={() => option.handler(props)}
       style={{
         margin: "5px",
+        marginRight: "8px",
         padding: "10px",
-        backgroundColor: "#5ccc9d",
+        backgroundColor: "var( --Primary-Normal)",
         border: "none",
-        borderRadius: "5px",
-        color: "white",
+        borderRadius: "12px",
+        color: "var(--Text-Normal)",
+        fontWeight: "600",
         cursor: "pointer",
       }}
     >
@@ -20,7 +22,7 @@ const Options = (props) => {
     </button>
   ));
 
-  return <div>{optionsMarkup}</div>;
+  return <div class="flex">{optionsMarkup}</div>;
 };
 
 export default Options;

@@ -17,14 +17,14 @@ const SideMenuBar = () => {
       >
         <div class="relative my-5 flex h-6 items-center justify-between px-2">
           <div
-            class="text-base font-semibold text-Text-Normal  "
+            class="cursor-default text-base font-semibold text-Text-Normal "
             onClick={() => {
               setShowSubMenus(!showSubMenus);
             }}
           >
             질문목록
           </div>
-          <img src={close_icon} class="h-[14px] w-[14px]" />
+          <img src={close_icon} class="h-[14px] w-[14px] cursor-pointer" />
         </div>
         <div class="px-2">
           <hr class="mb-3" />
