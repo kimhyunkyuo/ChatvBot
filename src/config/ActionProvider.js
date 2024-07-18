@@ -5,20 +5,18 @@ class ActionProvider {
   }
 
   handleQuickGuide = () => {
-    const message = this.createChatBotMessage(
-      "Quick Guidee",
+    // Create the custom Quick Guide message directly
+    const quickGuideMessage = this.createChatBotMessage(
+      "", // No text message
       {
         widget: "quickGuide",
-      },
-      {
-        custom: true,
-        messageType: "quickGuide",
+        withAvatar: false, // Ensure no avatar
       },
     );
 
     this.setState((prev) => ({
       ...prev,
-      messages: [...prev.messages, message],
+      messages: [...prev.messages, quickGuideMessage],
     }));
   };
 }
