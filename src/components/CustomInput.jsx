@@ -1,45 +1,60 @@
-import React from "react";
-import plusIcon from "../assets/plus_icon_14.png";
+import React, { useState } from "react";
 
-const CustomInput = (props) => {
+const CustomInput = ({ onSendMessage }) => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSend = () => {
+    onSendMessage(inputValue);
+    setInputValue("");
+  };
+
   return (
     <div
+      className="custom-input-container"
       style={{
-        position: "fixed",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "lightyellow",
+        position: "absolute",
+        bottom: "0",
+        width: "100%",
+        backgroundColor: "#f0f0f0",
         padding: "10px",
-        borderRadius: "10px",
-        width: "40px",
-        height: "40px",
-        zIndex: "21",
       }}
     >
       <input
+        type="file"
+        className="custom-file-input"
+        style={{ marginRight: "10px" }}
+      />
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+        className="custom-text-input"
+        placeholder="Type a message..."
         style={{
           flex: 1,
           padding: "10px",
-          border: "none",
-          outline: "none",
-          borderRadius: "10px",
+          borderRadius: "5px",
+          border: "1px solid #ccc",
         }}
-        {...props}
       />
       <button
+        onClick={handleSend}
+        className="custom-send-button"
         style={{
-          background: "none",
-          border: "none",
-          cursor: "pointer",
           marginLeft: "10px",
+          padding: "10px",
+          borderRadius: "5px",
+          backgroundColor: "blue",
+          color: "white",
         }}
-        onClick={() => alert("Plus icon clicked")}
       >
-        <img
-          src={plusIcon}
-          alt="Plus Icon"
-          style={{ width: "20px", height: "20px" }}
-        />
+        Send
       </button>
     </div>
   );

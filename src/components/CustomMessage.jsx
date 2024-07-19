@@ -44,7 +44,7 @@ const CustomMessage = (props) => {
           />
           <div>
             <div className="mb-[5px] ml-2 flex font-bold">
-              전문적인 상담사 뚝디
+              전문적인 상담사 똑디
               <span className="ml-2">{currentTime}</span>
             </div>
             <div
@@ -135,8 +135,10 @@ const CustomMessage = (props) => {
     <div className="flex items-center">
       <div>
         <div className="mb-[5px] ml-2 flex font-bold">
-          전문적인 상담사 뚝디
-          <span className="ml-2">{currentTime}</span>
+          전문적인 상담사 똑디
+          <span className="ml-2 mt-0.5 text-[11px] font-normal leading-4 text-Text-Alternative">
+            {currentTime}
+          </span>
         </div>
         <div className="react-chatbot-kit-chat-bot-message">
           {props.message}

@@ -31,9 +31,14 @@ const Options = (props) => {
   ));
 
   return (
-    <div className="options-container" class="flex">
-      {optionsMarkup}
-    </div>
+    <>
+      <div class="mr-4 text-right text-xs font-normal leading-[18px] text-Text-Alternative">
+        선택하신 항목에 대해 상세하게 알려드릴께요!
+      </div>
+      <div className="options-container" class="ml-[320px]  flex  ">
+        {optionsMarkup}
+      </div>
+    </>
   );
 };
 

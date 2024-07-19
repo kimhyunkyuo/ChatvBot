@@ -1,9 +1,6 @@
 import { createChatBotMessage, createCustomMessage } from "react-chatbot-kit";
-import ActionProvider from "./ActionProvider";
-import MessageParser from "./MessageParser";
 import CustomMessage from "../components/CustomMessage";
 import UserMessage from "../components/UserChatMessage";
-import CustomInput from "../components/CustomInput";
 
 import Options from "./Options";
 import botAvatar from "../assets/avatar.png";
@@ -47,7 +44,6 @@ const config = {
     userChatMessage: (props) => (
       <UserMessage {...props}>{props.children}</UserMessage>
     ),
-    customInput: (props) => <CustomInput {...props} />,
   },
   widgets: [
     {
