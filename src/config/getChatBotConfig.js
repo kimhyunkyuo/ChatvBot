@@ -36,7 +36,18 @@ const getChatBotConfig = (menuItem) => {
     widgets: [
       {
         widgetName: "optionsWidget",
-        widgetFunc: (props) => <Options {...props} />,
+        widgetFunc: (props) => (
+          <Options
+            {...props}
+            options={[
+              { text: "퀵 가이드", handler: "handleQuickGuide" },
+              {
+                text: "인터넷 보험 상품 목록",
+                handler: "handleInsuranceList",
+              },
+            ]}
+          />
+        ),
       },
       {
         widgetName: "quickGuide",
@@ -47,7 +58,24 @@ const getChatBotConfig = (menuItem) => {
       {
         widgetName: "productIntroWidget",
         widgetFunc: (props) => (
-          <CustomMessage {...props} messageType="productIntro" />
+          <>
+            <CustomMessage {...props} messageType="productIntro" />
+            <Options
+              {...props}
+              options={[
+                { text: "iM 암보험 무배당 2404", handler: "handleOption1" },
+                {
+                  text: "iM 간편정기보험 무배당 2404",
+                  handler: "handleOption2",
+                },
+                { text: "iM 저축보험 무배당 2404", handler: "handleOption3" },
+                {
+                  text: "iM 교통상해보험 무배당 2404",
+                  handler: "handleOption4",
+                },
+              ]}
+            />
+          </>
         ),
       },
       {
@@ -81,8 +109,9 @@ const getChatBotConfig = (menuItem) => {
       break;
     case "productIntro":
       config.initialMessages = [
-        createChatBotMessage("상품소개에 대한 내용을 안내해드리겠습니다.", {
+        createChatBotMessage("", {
           widget: "productIntroWidget",
+          withAvatar: false,
         }),
       ];
       break;

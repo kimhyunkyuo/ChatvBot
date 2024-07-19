@@ -40,6 +40,54 @@ class ActionProvider {
     }));
   };
 
+  handleOption1 = () => {
+    const message = this.createChatBotMessage("You selected IM 무배당 1.");
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  handleOption2 = () => {
+    const message = this.createChatBotMessage("You selected IM 무배당 2.");
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  handleOption3 = () => {
+    const message = this.createChatBotMessage("You selected IM 무배당 3.");
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  handleOption4 = () => {
+    const message = this.createChatBotMessage("You selected IM 무배당 4.");
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  // handleQuickGuideOption = () => {
+  //   const message = this.createChatBotMessage("You selected Quick Guide.");
+  //   this.setState((prev) => ({
+  //     ...prev,
+  //     messages: [...prev.messages, message],
+  //   }));
+  // };
+
+  handleInsuranceList = () => {
+    const message = this.createChatBotMessage(
+      "You selected Internet Insurance Products List.",
+    );
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
   // Add other handlers as needed
 }
 

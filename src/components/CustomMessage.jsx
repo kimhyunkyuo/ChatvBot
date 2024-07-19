@@ -130,7 +130,80 @@ const CustomMessage = (props) => {
         </div>
       );
     case "productIntro":
-      return <div>상품소개@@</div>;
+      return (
+        <div className="flex items-center">
+          <div class="flex">
+            <img
+              src={botAvatar}
+              alt="Bot Avatar"
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "yellow",
+              }}
+            />
+            <div>
+              <div className="mb-[5px] ml-2 flex font-bold">
+                전문적인 상담사 똑디
+                <span className="ml-2 mt-0.5 text-[11px] font-normal leading-4 text-Text-Alternative">
+                  {currentTime}
+                </span>
+              </div>
+              <div
+                className="quick-guide-container2"
+                class="ml-2 h-[208px] w-[400px] bg-white p-3"
+              >
+                <div className="mb-1 flex text-base font-semibold leading-6 text-Text-Normal">
+                  인터넷 보험 상품 목록
+                </div>
+                <div class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative">
+                  iM 라이프에서 제공하는 인터넷 보험 상품은 4가지 있습니다.
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex">
+                    <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal  text-xs">
+                      1
+                    </div>
+                    iM 암보험 무배당 2024
+                  </div>
+                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                </div>
+                <hr class="my-2 text-Line-Gray-Assistive" />
+                <div class="flex items-center justify-between">
+                  <div class="flex">
+                    <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal text-xs">
+                      2
+                    </div>
+                    iM 간편정기보험 무배당 2024
+                  </div>
+                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                </div>
+                <hr class="my-2 text-Line-Gray-Assistive" />
+                <div class="flex items-center justify-between">
+                  <div class="flex">
+                    <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal text-xs">
+                      3
+                    </div>
+                    iM 저축보험 무배당 2024
+                  </div>
+                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                </div>
+                <hr class="my-2 text-Line-Gray-Assistive" />
+                <div class="flex items-center justify-between">
+                  <div class="flex">
+                    <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal text-xs">
+                      4
+                    </div>
+                    iM 교통상해보험 무배당 2024
+                  </div>
+                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     case "simulation":
       return <div>시뮬레이션@@</div>;
     // Add other cases as needed
@@ -142,6 +215,7 @@ const CustomMessage = (props) => {
   if (props.message === "") {
     return null;
   }
+
   return (
     <div className="flex items-center">
       <div>
