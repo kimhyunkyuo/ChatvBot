@@ -1,27 +1,30 @@
+// MyChatBot.js
+import React, { useState, useEffect } from "react";
 import Chatbot from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
-import config from "../config/config.js";
 import MessageParser from "../config/MessageParser.js";
 import ActionProvider from "../config/ActionProvider.js";
-import CustomInput from "./CustomInput.jsx";
 import "./MyChatBot.css";
 
-const MyChatBot = () => {
-  const onSendMessage = (message) => {
-    // Implement the send message functionality here
-    console.log("Sending message:", message);
-    // You can dispatch the message to the chatbot's message state
-  };
+const MyChatBot = ({ config }) => {
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    console.log("Chatbot re-rendered with config:", config);
+    setKey((prevKey) => prevKey + 1); // Increment the key to force re-render
+  }, [config]);
+
   return (
-    <div class="chatbot-container">
+    <div className="chatbot-container">
       <Chatbot
+        key={key}
         config={config}
         messageParser={MessageParser}
         actionProvider={ActionProvider}
         placeholderText="궁금한 사항이 있으시다면 적어주십시오."
       />
-      {/* <CustomInput onSendMessage={onSendMessage} /> */}
     </div>
   );
 };
+
 export default MyChatBot;

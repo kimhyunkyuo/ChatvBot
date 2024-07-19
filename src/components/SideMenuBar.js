@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
-const SideMenuBar = () => {
+const SideMenuBar = ({ onMenuItemClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [showSubMenus, setShowSubMenus] = useState(false);
 
-  const hamburger = process.env.PUBLIC_URL + "/hamburger.png";
   const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
+
+  const handleMenuItemClick = (menuItem) => {
+    onMenuItemClick(menuItem);
+  };
 
   return (
     <div className="">
@@ -29,23 +31,40 @@ const SideMenuBar = () => {
         <div class="px-2">
           <hr class="mb-3" />
         </div>
-        <div class="mb-1  flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal ">
+        <div
+          class="mb-1  flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal "
+          onClick={() => handleMenuItemClick("quickGuide")}
+        >
           퀵가이드
         </div>
-        <div class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal ">
+        <div
+          class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal "
+          onClick={() => handleMenuItemClick("productIntro")}
+        >
           상품소개
         </div>
-        <div class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal ">
+        <div
+          class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal "
+          onClick={() => handleMenuItemClick("simulation")}
+        >
           시뮬레이션
         </div>
-
-        <div class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal ">
+        <div
+          class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal "
+          onClick={() => handleMenuItemClick("savingsLevel")}
+        >
           저축, 저금 수준
         </div>
-        <div class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal ">
+        <div
+          class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal "
+          onClick={() => handleMenuItemClick("postSubscription")}
+        >
           청약 이후 관리
         </div>
-        <div class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal ">
+        <div
+          class="mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold hover:bg-Fill-Gray-Normal hover:text-Text-Normal "
+          onClick={() => handleMenuItemClick("retrieveInfo")}
+        >
           상담 정보 불러오기
         </div>
       </div>

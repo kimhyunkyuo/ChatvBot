@@ -1,23 +1,23 @@
-// import axios from "axios";
-import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
 import SideMenuBar from "../components/SideMenuBar";
 import MyChatBot from "../components/MyChatBot";
+import { getChatBotConfig } from "../config/getChatBotConfig"; // This function returns the config based on menu item
 
 const Main = () => {
-  const name = useRef("");
-  const phone = useRef(null);
-
-  const [Name, setName] = useState("");
-  const [Phone, setPhone] = useState("");
+  const [botConfig, setBotConfig] = useState(getChatBotConfig(""));
+  useEffect(() => {
+    console.log("Current bot config:", botConfig);
+  }, [botConfig]);
+  const handleMenuItemClick = (menuItem) => {
+    setBotConfig(getChatBotConfig(menuItem));
+  };
 
   const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
 
   return (
     <div>
       <div class="flex h-full w-full">
-        <SideMenuBar />
+        <SideMenuBar onMenuItemClick={handleMenuItemClick} />
         <div class="flex h-full w-full flex-col">
           <header class="mx-auto flex h-[64px] w-[600px] items-center justify-between">
             <div></div>
@@ -29,7 +29,7 @@ const Main = () => {
             </button>
           </header>
           <hr class="mb-[-3px] h-1 w-full" />
-          <MyChatBot />
+          <MyChatBot config={botConfig} />
         </div>
       </div>
     </div>

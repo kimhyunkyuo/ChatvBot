@@ -5,20 +5,42 @@ class ActionProvider {
   }
 
   handleQuickGuide = () => {
-    // Create the custom Quick Guide message directly
-    const quickGuideMessage = this.createChatBotMessage(
-      "", // No text message
-      {
-        widget: "quickGuide",
-        withAvatar: false, // Ensure no avatar
-      },
-    );
+    const quickGuideMessage = this.createChatBotMessage("", {
+      widget: "quickGuide",
+      withAvatar: false,
+    });
 
     this.setState((prev) => ({
       ...prev,
       messages: [...prev.messages, quickGuideMessage],
     }));
   };
+
+  handleProductIntro = () => {
+    const productIntroMessage = this.createChatBotMessage("", {
+      widget: "productIntroWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, productIntroMessage],
+    }));
+  };
+
+  handleSimulation = () => {
+    const simulationMessage = this.createChatBotMessage("", {
+      widget: "simulationWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, simulationMessage],
+    }));
+  };
+
+  // Add other handlers as needed
 }
 
 export default ActionProvider;
