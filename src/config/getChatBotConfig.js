@@ -84,6 +84,12 @@ const getChatBotConfig = (menuItem) => {
           <CustomMessage {...props} messageType="simulation" />
         ),
       },
+      {
+        widgetName: "pdfViewer",
+        widgetFunc: (props) => (
+          <CustomMessage {...props} messageType="pdfViewer" />
+        ),
+      },
       // Add other widgets here
     ],
     customStyles: {

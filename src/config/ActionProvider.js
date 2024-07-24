@@ -41,7 +41,13 @@ class ActionProvider {
   };
 
   handleOption1 = () => {
-    const message = this.createChatBotMessage("You selected IM 무배당 1.");
+    const message = this.createChatBotMessage("", {
+      widget: "pdfViewer",
+      pdfUrl: "/assets/avatar.pdf",
+      pdfName: "avatar.pdf",
+      withAvatar: false,
+    });
+
     this.setState((prev) => ({
       ...prev,
       messages: [...prev.messages, message],
@@ -71,13 +77,6 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
-  // handleQuickGuideOption = () => {
-  //   const message = this.createChatBotMessage("You selected Quick Guide.");
-  //   this.setState((prev) => ({
-  //     ...prev,
-  //     messages: [...prev.messages, message],
-  //   }));
-  // };
 
   handleInsuranceList = () => {
     const message = this.createChatBotMessage(
@@ -88,7 +87,6 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
-  // Add other handlers as needed
 }
 
 export default ActionProvider;

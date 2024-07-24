@@ -47,13 +47,10 @@ const Options = (props) => {
         fontWeight: "600",
         cursor: "pointer",
         height: "40px",
-
         maxWidth: "500px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-
-        // maxWidth: "250px",
       }}
       key={index}
       onClick={() => props.actionProvider[option.handler]()}

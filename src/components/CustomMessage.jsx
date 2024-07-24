@@ -1,12 +1,32 @@
 import React, { useState, useEffect } from "react";
 import "./MyChatBot.css";
 import botAvatar from "../assets/avatar.png";
+import PdfViewer from "./PdfViewer";
 
+// 4.4.168
 const CustomMessage = (props) => {
   const { messageType, message } = props;
   // console.log(config);
   const [currentTime, setCurrentTime] = useState("");
   const right_arrow = process.env.PUBLIC_URL + "/right_arrow.png";
+  const pdf_icon = process.env.PUBLIC_URL + "/PDF_icon.png";
+  const search_icon = process.env.PUBLIC_URL + "/Search_icon_13.5.png";
+  const download_icon = process.env.PUBLIC_URL + "/download_icon_13.5.png";
+  const samplePdf = process.env.PUBLIC_URL + "/abc.pdf";
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  console.log(message);
+  const handlePreviewClick = () => {
+    setModalIsOpen(true);
+  };
+
+  const pdfUrl = "/assets/avatar.pdf";
+  const pdfName = "240328 가입시알아두실사항_DT.pdf";
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   useEffect(() => {
     const updateCurrentTime = () => {
@@ -125,8 +145,6 @@ const CustomMessage = (props) => {
               </div>
             </div>
           </div>
-
-          {/* </div> */}
         </div>
       );
     case "productIntro":
@@ -207,6 +225,75 @@ const CustomMessage = (props) => {
     case "simulation":
       return <div>시뮬레이션@@</div>;
     // Add other cases as needed
+    case "pdfViewer":
+      // content = (
+      return (
+        <div className="flex items-center">
+          <div class="flex">
+            <img
+              src={botAvatar}
+              alt="Bot Avatar"
+              style={{
+                width: "50px",
+                height: "50px",
+                borderRadius: "50%",
+                backgroundColor: "yellow",
+              }}
+            />
+            <div>
+              <div className="mb-[5px] ml-2 flex font-bold">
+                전문적인 상담사 똑디
+                <span className="ml-2 mt-0.5 text-[11px] font-normal leading-4 text-Text-Alternative">
+                  {currentTime}
+                </span>
+              </div>
+              <div class="ml-2 h-[150px] w-[420px] rounded-[0_12px_12px_12px] bg-white p-3">
+                <div class="mb-1 flex text-base font-semibold leading-6 text-Text-Normal">
+                  iM 암보험 무배당 2404
+                </div>
+                <div class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative">
+                  iM 암보험 무배당 2404 가입시 알아두실 사항에 대해
+                  소개하겠습니다.
+                </div>
+                <div class="flex h-[66px] w-[376px] items-center rounded-lg bg-Fill-Gray-Assistive p-3">
+                  <div>
+                    <img src={pdf_icon} />
+                  </div>
+                  <div class="ml-4">
+                    <div class=" mb-1 text-sm font-semibold leading-5 text-Text-Normal">
+                      240328 가입시알아두실사항_DT.pdf
+                    </div>
+                    <div class="flex items-center">
+                      {/* <img src={search_icon} class="mr-1 h-[14px] w-[14px]" /> */}
+                      <PdfViewer fileUrl={samplePdf} />
+                    </div>
+                  </div>
+                </div>
+                {/* {props.messageType === "pdfViewer" && (
+                  <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={closeModal}
+                    contentLabel="PDF 미리보기"
+                    ariaHideApp={false}
+                  >
+                    <button onClick={closeModal}>Close</button>
+                    <Document
+                      file={pdfUrl}
+                      onLoadError={(error) =>
+                        console.error("Error while loading document:", error)
+                      }
+                    >
+                      <Page pageNumber={1} />
+                    </Document>
+                  </Modal>
+                )} */}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+      // );
+      break;
     default:
       content = <div>{message}</div>; // Display the message prop
       break;

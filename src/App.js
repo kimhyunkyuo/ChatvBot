@@ -6,6 +6,7 @@ import { useSelector, useDispatch, Provider } from "react-redux";
 
 const Login = lazy(() => import("./pages/Login"));
 const Main = lazy(() => import("./pages/Main"));
+const Test = lazy(() => import("./pages/Test"));
 // const Password = lazy(() => import("./pages/Password"));
 // const Signup = lazy(() => import("./pages/Signup/Signup"));
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/main" element={<Main />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </div>
       </div>
