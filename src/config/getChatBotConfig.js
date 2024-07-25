@@ -90,6 +90,12 @@ const getChatBotConfig = (menuItem) => {
           <CustomMessage {...props} messageType="pdfViewer" />
         ),
       },
+      {
+        widgetName: "cancellationRefundWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props} messageType="cancellationRefund" />
+        ),
+      },
       // Add other widgets here
     ],
     customStyles: {

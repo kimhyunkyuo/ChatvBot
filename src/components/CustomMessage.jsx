@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./MyChatBot.css";
 import botAvatar from "../assets/avatar.png";
 import PdfViewer from "./PdfViewer";
-
+import RenewableGraph from "./RenewableGraph";
+import NonRenewableGraph from "./NonRenewableGraph";
 // 4.4.168
 const CustomMessage = (props) => {
   const { messageType, message } = props;
@@ -54,7 +55,6 @@ const CustomMessage = (props) => {
     case "quickGuide":
       return (
         <div className="flex items-center ">
-          {/* <div> */}
           <div class="flex">
             <img
               src={botAvatar}
@@ -81,6 +81,7 @@ const CustomMessage = (props) => {
                 >
                   퀵 가이드
                 </div>
+
                 <div
                   className="quick-guide-subtitle"
                   class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative"
@@ -225,6 +226,44 @@ const CustomMessage = (props) => {
     case "simulation":
       return <div>시뮬레이션@@</div>;
     // Add other cases as needed
+    case "cancellationRefund":
+      return (
+        <div>
+          <div className="flex items-center">
+            <div class="flex">
+              <img
+                src={botAvatar}
+                alt="Bot Avatar"
+                style={{
+                  width: "50px",
+                  height: "50px",
+                  borderRadius: "50%",
+                  backgroundColor: "yellow",
+                }}
+              />
+              <div>
+                <div className="mb-[5px] ml-2 flex font-bold">
+                  전문적인 상담사 똑디
+                  <span className="ml-2 mt-0.5 text-[11px] font-normal leading-4 text-Text-Alternative">
+                    {currentTime}
+                  </span>
+                </div>
+                <div class="mb-2 ml-2 max-h-[150px] w-[420px] rounded-[0_12px_12px_12px] bg-white p-3">
+                  <div class="mb-1 flex text-base font-semibold leading-6 text-Text-Normal">
+                    iM 암보험 무배당 2404
+                  </div>
+                  <div class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative">
+                    iM 암보험 무배당 2404 가입시 알아두실 사항에 대해
+                    소개하겠습니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <RenewableGraph />
+          <NonRenewableGraph />
+        </div>
+      );
     case "pdfViewer":
       // content = (
       return (
@@ -264,29 +303,10 @@ const CustomMessage = (props) => {
                       240328 가입시알아두실사항_DT.pdf
                     </div>
                     <div class="flex items-center">
-                      {/* <img src={search_icon} class="mr-1 h-[14px] w-[14px]" /> */}
                       <PdfViewer fileUrl={samplePdf} />
                     </div>
                   </div>
                 </div>
-                {/* {props.messageType === "pdfViewer" && (
-                  <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={closeModal}
-                    contentLabel="PDF 미리보기"
-                    ariaHideApp={false}
-                  >
-                    <button onClick={closeModal}>Close</button>
-                    <Document
-                      file={pdfUrl}
-                      onLoadError={(error) =>
-                        console.error("Error while loading document:", error)
-                      }
-                    >
-                      <Page pageNumber={1} />
-                    </Document>
-                  </Modal>
-                )} */}
               </div>
             </div>
           </div>

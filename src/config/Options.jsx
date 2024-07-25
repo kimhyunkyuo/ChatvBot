@@ -47,10 +47,9 @@ const Options = (props) => {
         fontWeight: "600",
         cursor: "pointer",
         height: "40px",
-        maxWidth: "500px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        maxWidth: "250px",
+        marginRight: "16px",
+        float: "right",
       }}
       key={index}
       onClick={() => props.actionProvider[option.handler]()}
@@ -60,14 +59,12 @@ const Options = (props) => {
   ));
 
   return (
-    <>
-      <div class="ml-2 mt-4 text-left text-xs  font-normal leading-[18px] text-Text-Alternative">
+    <div class="h-[124px] w-[800px]">
+      <div class="mb-1 ml-2 mt-4 text-right text-xs font-normal leading-[18px] text-Text-Alternative">
         선택하신 항목에 대해 상세하게 알려드릴께요!
       </div>
-      <div className="options-container" class="  flex  ">
-        {optionsMarkup}
-      </div>
-    </>
+      <div class="row-auto  ml-[270px] w-[550px] ">{optionsMarkup}</div>
+    </div>
   );
 };
 

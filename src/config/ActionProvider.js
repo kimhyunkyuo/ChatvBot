@@ -53,9 +53,12 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
-
+  cancellationRefundWidget;
   handleOption2 = () => {
-    const message = this.createChatBotMessage("You selected IM 무배당 2.");
+    const message = this.createChatBotMessage("", {
+      widget: "cancellationRefundWidget",
+      withAvatar: false,
+    });
     this.setState((prev) => ({
       ...prev,
       messages: [...prev.messages, message],

@@ -1,0 +1,91 @@
+.message-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  /* width: 100%; */
+  /* height: 100%; */
+  width: 424px;
+  height: 522px;
+  margin-left: 55.5px;
+  margin-bottom: 12px;
+  /* margin: 0 auto; */
+}
+
+.message-content {
+  text-align: left;
+}
+
+.message-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Text-Normal);
+  line-height: 24px;
+}
+
+.message-content p {
+  font-size: 12px;
+  color: var(--Text-Normal);
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.graph-container {
+  position: relative;
+  background-color: var(--Fill-Gray-Assistive);
+  margin-top: 8px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.graph-container h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.recharts-cartesian-axis-tick-line,
+.recharts-cartesian-grid-vertical,
+.recharts-cartesian-grid-horizontal {
+  display: none;
+}
+.recharts-layer,
+.recharts-line-dots {
+  width: 20px;
+  height: 20px;
+}
+
+.custom-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.custom-axis-tick {
+  font-size: 12px;
+  line-height: 18px;
+  fill: var(--Text-Normal);
+  font-weight: 400;
+}
+.recharts-cartesian-axis-line {
+  stroke: var(--Line-Gray-Normal);
+}
+/* 
+.x-axis-label {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: var(--Text-Normal);
+}
+
+.y-axis-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: gray;
+  transform-origin: left top 0;
+} */
