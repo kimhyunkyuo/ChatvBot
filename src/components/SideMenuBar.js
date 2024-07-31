@@ -35,6 +35,16 @@ const SideMenuBar = ({ onMenuItemClick }) => {
         </div>
         <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
+            activeMenuItem === "retrieveInfo"
+              ? "bg-Fill-Gray-Normal text-Text-Normal"
+              : "hover:bg-Fill-Gray-Normal hover:text-Text-Normal"
+          }`}
+          onClick={() => handleMenuItemClick("retrieveInfo")}
+        >
+          홈
+        </div>
+        <div
+          className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "quickGuide"
               ? "bg-Fill-Gray-Normal text-Text-Normal"
               : "hover:bg-Fill-Gray-Normal hover:text-Text-Normal"
@@ -53,7 +63,7 @@ const SideMenuBar = ({ onMenuItemClick }) => {
         >
           상품소개
         </div>
-        <div
+        {/* <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "simulation"
               ? "bg-Fill-Gray-Normal text-Text-Normal"
@@ -62,8 +72,8 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           onClick={() => handleMenuItemClick("simulation")}
         >
           시뮬레이션
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "savingsLevel"
               ? "bg-Fill-Gray-Normal text-Text-Normal"
@@ -72,7 +82,7 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           onClick={() => handleMenuItemClick("savingsLevel")}
         >
           저축, 저금 수준
-        </div>
+        </div> */}
         <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "postSubscription"
@@ -81,9 +91,9 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           }`}
           onClick={() => handleMenuItemClick("postSubscription")}
         >
-          청약 이후 관리
+          고객센터
         </div>
-        <div
+        {/* <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "retrieveInfo"
               ? "bg-Fill-Gray-Normal text-Text-Normal"
@@ -92,7 +102,7 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           onClick={() => handleMenuItemClick("retrieveInfo")}
         >
           상담 정보 불러오기
-        </div>
+        </div> */}
       </div>
     </div>
   );

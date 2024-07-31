@@ -53,7 +53,7 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
-  cancellationRefundWidget;
+
   handleOption2 = () => {
     const message = this.createChatBotMessage("", {
       widget: "cancellationRefundWidget",

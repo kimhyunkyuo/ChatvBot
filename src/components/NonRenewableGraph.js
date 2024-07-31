@@ -87,7 +87,7 @@ const NonRenewableGraph = () => {
   return (
     <div
       className="message-box"
-      class="mb-[80px] ml-[55.5px] h-[522px] w-[424px] rounded-[10px] bg-white p-5"
+      class="mb-[50px] ml-[55.5px] h-[522px] w-[424px] rounded-[10px] bg-white p-5"
     >
       <div className="message-content">
         <h3>비갱신형</h3>

@@ -4,16 +4,21 @@ import botAvatar from "../assets/avatar.png";
 import PdfViewer from "./PdfViewer";
 import RenewableGraph from "./RenewableGraph";
 import NonRenewableGraph from "./NonRenewableGraph";
-// 4.4.168
+import ActionProvider from "../config/ActionProvider";
+import { useContext } from "react";
+import { ChatbotContext } from "react-chatbot-kit";
+
 const CustomMessage = (props) => {
   const { messageType, message } = props;
-  // console.log(config);
   const [currentTime, setCurrentTime] = useState("");
   const right_arrow = process.env.PUBLIC_URL + "/right_arrow.png";
   const pdf_icon = process.env.PUBLIC_URL + "/PDF_icon.png";
   const search_icon = process.env.PUBLIC_URL + "/Search_icon_13.5.png";
   const download_icon = process.env.PUBLIC_URL + "/download_icon_13.5.png";
   const samplePdf = process.env.PUBLIC_URL + "/abc.pdf";
+
+  // const { createChatBotMessage, setState } = useContext(ChatbotContext);
+  // const actionProvider = new ActionProvider(createChatBotMessage, setState);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -69,11 +74,13 @@ const CustomMessage = (props) => {
             <div>
               <div className="mb-[5px] ml-2 flex font-bold">
                 전문적인 상담사 똑디
-                <span className="ml-2">{currentTime}</span>
+                <span className="ml-2 mt-0.5 text-[11px] font-normal leading-4 text-Text-Alternative">
+                  {currentTime}
+                </span>
               </div>
               <div
                 className="quick-guide-container1"
-                class="ml-2 h-[400px] w-[400px] bg-white p-3"
+                class="ml-2 h-[360px] w-[400px] bg-white p-3"
               >
                 <div
                   className="quick-guide-title"
@@ -81,14 +88,13 @@ const CustomMessage = (props) => {
                 >
                   퀵 가이드
                 </div>
-
                 <div
                   className="quick-guide-subtitle"
                   class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative"
                 >
-                  보험 상품에 대해 궁금한 점이 있으시다면 클릭해주십시오.
+                  보험 상품에 대한 FAQ입니다.
                 </div>
-                <div class="mb-2 flex items-center justify-center  rounded-lg bg-Fill-Gray-Assistive pr-2">
+                {/* <div class="mb-2 flex items-center justify-center rounded-lg bg-Fill-Gray-Assistive pr-2">
                   <input
                     class="h-[30px] w-[376px] bg-Fill-Gray-Assistive p-2 text-xs font-normal leading-[14px] text-Text-Assistive"
                     placeholder="찾고싶은 약관이 있다면 검색하세요"
@@ -97,56 +103,59 @@ const CustomMessage = (props) => {
                     src={search_icon}
                     class="h-[14px] w-[14px] cursor-pointer"
                   />
-                </div>
+                </div> */}
                 <div class=" h-[280px] w-[376px] rounded-lg bg-Fill-Gray-Assistive ">
-                  <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
-                    <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
+                  <div
+                    class="flex cursor-pointer items-center justify-between  hover:bg-slate-200"
+                    // onClick={actionProvider.handleOption}
+                  >
+                    <div class="mt-1 flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       마케팅 동의에 대한 철회는 어떻게 하나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       중도인출금 신청은 어떻게 하나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       만기보험금 신청은 어떻게 하나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       해약은 어떻게 하나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       보험료가 통장잔고 부족으로 미납되었습니다. 언제까지
                       청구되나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       자동이체 신청/변경/해지는 어떻게 하나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       자동 아체를 해지하면 어떻게 보험료를 납입하나요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       적립금과 해약환급금의 차이는 무엇인가요?
                     </div>
-                    <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                 </div>
               </div>
@@ -177,7 +186,7 @@ const CustomMessage = (props) => {
               </div>
               <div
                 className="quick-guide-container2"
-                class="ml-2 h-[208px] w-[400px] bg-white p-3"
+                class="ml-2 h-[208px] w-[400px] rounded-[0_12px_12px_12px] bg-white p-3"
               >
                 <div className="mb-1 flex text-base font-semibold leading-6 text-Text-Normal">
                   인터넷 보험 상품 목록
@@ -185,44 +194,44 @@ const CustomMessage = (props) => {
                 <div class="mb-1 flex text-sm font-normal leading-5 text-Text-Alternative">
                   iM 라이프에서 제공하는 인터넷 보험 상품은 4가지 있습니다.
                 </div>
-                <div class="flex cursor-pointer items-center  justify-between py-2 hover:bg-slate-200">
+                <div class="flex cursor-pointer items-center  justify-between py-2 ">
                   <div class="flex pl-2">
                     <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal  text-xs">
                       1
                     </div>
                     iM 암보험 무배당 2024
                   </div>
-                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
                 <hr class=" text-Line-Gray-Assistive" />
-                <div class="flex cursor-pointer items-center  justify-between py-2 hover:bg-slate-200">
+                <div class="flex cursor-pointer items-center justify-between py-2 ">
                   <div class="flex pl-2">
                     <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal text-xs">
                       2
                     </div>
                     iM 간편정기보험 무배당 2024
                   </div>
-                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
                 <hr class=" text-Line-Gray-Assistive" />
-                <div class="flex cursor-pointer items-center justify-between py-2 hover:bg-slate-200">
+                <div class="flex cursor-pointer items-center justify-between py-2 ">
                   <div class="flex pl-2">
                     <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal text-xs">
                       3
                     </div>
                     iM 저축보험 무배당 2024
                   </div>
-                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
                 <hr class="text-Line-Gray-Assistive" />
-                <div class="flex cursor-pointer items-center justify-between py-2 hover:bg-slate-200">
+                <div class="flex cursor-pointer items-center justify-between py-2 ">
                   <div class="flex pl-2">
                     <div class="mr-2 flex h-[18px] w-[18px] items-center justify-center rounded-[9px] bg-Primary-Normal text-xs">
                       4
                     </div>
                     iM 교통상해보험 무배당 2024
                   </div>
-                  <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} />
+                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
               </div>
             </div>
@@ -235,7 +244,7 @@ const CustomMessage = (props) => {
     case "cancellationRefund":
       return (
         <div>
-          <div className="flex items-center">
+          <div className="mt-[60px] flex items-center">
             <div class="flex">
               <img
                 src={botAvatar}
@@ -273,7 +282,7 @@ const CustomMessage = (props) => {
     case "pdfViewer":
       // content = (
       return (
-        <div className="flex items-center">
+        <div className="mb-[60px] flex items-center">
           <div class="flex">
             <img
               src={botAvatar}
@@ -300,7 +309,7 @@ const CustomMessage = (props) => {
                   iM 암보험 무배당 2404 가입시 알아두실 사항에 대해
                   소개하겠습니다.
                 </div>
-                <div class="flex h-[66px] w-[376px] items-center rounded-lg bg-Fill-Gray-Assistive p-3">
+                <div class="flex h-[66px] w-[394px] items-center rounded-lg bg-Fill-Gray-Assistive p-3">
                   <div>
                     <img src={pdf_icon} />
                   </div>

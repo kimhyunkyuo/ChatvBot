@@ -40,11 +40,11 @@ const getChatBotConfig = (menuItem) => {
           <Options
             {...props}
             options={[
-              { text: "퀵 가이드", handler: "handleQuickGuide" },
               {
                 text: "인터넷 보험 상품 목록",
                 handler: "handleInsuranceList",
               },
+              { text: "퀵 가이드", handler: "handleQuickGuide" },
             ]}
           />
         ),
@@ -52,7 +52,40 @@ const getChatBotConfig = (menuItem) => {
       {
         widgetName: "quickGuide",
         widgetFunc: (props) => (
-          <CustomMessage {...props} messageType="quickGuide" />
+          <>
+            <CustomMessage {...props} messageType="quickGuide" />
+            <Options
+              {...props}
+              options={[
+                { text: "마케팅 동의 철회", handler: "handleOption5" },
+                {
+                  text: "중도인출금 신청",
+                  handler: "handleOption6",
+                },
+                { text: "만기보험금 신청 방법", handler: "handleOption7" },
+                {
+                  text: "해약 방법",
+                  handler: "handleOption8",
+                },
+                {
+                  text: "보험료가 통장잔고 미인출 문의",
+                  handler: "handleOption8",
+                },
+                {
+                  text: "자동이체 신청/변경/해지",
+                  handler: "handleOption8",
+                },
+                {
+                  text: "자동이체 해지시 보험료 납입",
+                  handler: "handleOption8",
+                },
+                {
+                  text: "적립금과 해약환급금의 차이",
+                  handler: "handleOption8",
+                },
+              ]}
+            />
+          </>
         ),
       },
       {
@@ -111,12 +144,10 @@ const getChatBotConfig = (menuItem) => {
   switch (menuItem) {
     case "quickGuide":
       config.initialMessages = [
-        createChatBotMessage(
-          "안녕하세요! 전문적인 상담사 똑디입니다. 저희가 도와드릴 부분이 있을까요?",
-          {
-            widget: "quickGuide",
-          },
-        ),
+        createChatBotMessage("", {
+          widget: "quickGuide",
+          withAvatar: false,
+        }),
       ];
       break;
     case "productIntro":
