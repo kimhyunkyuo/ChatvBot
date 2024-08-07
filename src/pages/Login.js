@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import DraggableModalButton from "../components/DraggableModalButton";
 
 const Login = () => {
   const name = useRef("");
@@ -19,14 +20,14 @@ const Login = () => {
       {/* <Navbar /> */}
       <div>
         <div>
-          <div class="mx-auto flex h-[64px] w-[800px] items-center justify-between">
+          <div class="mx-auto flex h-[64px] w-[800px] items-center justify-center">
             <div></div>
             <div className="flex cursor-default items-center justify-center text-base font-semibold">
               상담 챗봇 이용하기
             </div>
-            <button>
+            {/* <button>
               <img src={close_icon} />
-            </button>
+            </button> */}
           </div>
           <hr class="mb-10 h-1 w-full" />
           <div class="flex items-center justify-center">
@@ -83,6 +84,7 @@ const Login = () => {
           </div>
           */}
         </div>
+        <DraggableModalButton />
       </div>
     </div>
   );
