@@ -16,17 +16,17 @@ const Main = () => {
 
   return (
     <div>
-      <div class="flex h-full w-full">
+      <div class="flex h-[600px] w-[830px]">
         <SideMenuBar onMenuItemClick={handleMenuItemClick} />
-        <div class="flex h-full w-full flex-col">
-          <header class="mx-auto flex h-[64px] w-[600px] items-center justify-between">
+        <div class="flex h-[89.5%] w-[630px] flex-col bg-white">
+          <header class="ml-[228px] flex h-[64px] w-[600px] items-center ">
             <div></div>
             <div className="flex cursor-default items-center justify-center text-base font-semibold">
               전문적인 상담사와 대화
             </div>
-            <button>
+            {/* <button>
               <img src={close_icon} />
-            </button>
+            </button> */}
           </header>
           <hr class="mb-[-3px] h-1 w-full" />
           <MyChatBot config={botConfig} />

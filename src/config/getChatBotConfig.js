@@ -37,55 +37,60 @@ const getChatBotConfig = (menuItem) => {
       {
         widgetName: "optionsWidget",
         widgetFunc: (props) => (
-          <Options
-            {...props}
-            options={[
-              {
-                text: "인터넷 보험 상품 목록",
-                handler: "handleInsuranceList",
-              },
-              { text: "퀵 가이드", handler: "handleQuickGuide" },
-            ]}
-          />
+          <div class="h-[60px] w-full">
+            {" "}
+            <Options
+              {...props}
+              options={[
+                {
+                  text: "인터넷 보험 상품 목록",
+                  handler: "handleInsuranceList",
+                },
+                { text: "퀵 가이드", handler: "handleQuickGuide" },
+              ]}
+            />
+          </div>
         ),
       },
       {
         widgetName: "quickGuide",
         widgetFunc: (props) => (
-          <>
+          <div class="mt-[20px] h-[634px] w-full">
             <CustomMessage {...props} messageType="quickGuide" />
-            <Options
-              {...props}
-              options={[
-                { text: "마케팅 동의 철회", handler: "handleOption5" },
-                {
-                  text: "중도인출금 신청",
-                  handler: "handleOption6",
-                },
-                { text: "만기보험금 신청 방법", handler: "handleOption7" },
-                {
-                  text: "해약 방법",
-                  handler: "handleOption8",
-                },
-                {
-                  text: "보험료가 통장잔고 미인출 문의",
-                  handler: "handleOption8",
-                },
-                {
-                  text: "자동이체 신청/변경/해지",
-                  handler: "handleOption8",
-                },
-                {
-                  text: "자동이체 해지시 보험료 납입",
-                  handler: "handleOption8",
-                },
-                {
-                  text: "적립금과 해약환급금의 차이",
-                  handler: "handleOption8",
-                },
-              ]}
-            />
-          </>
+            <div class="h-[240px] w-full">
+              <Options
+                {...props}
+                options={[
+                  { text: "마케팅 동의 철회", handler: "handleOption1" },
+                  {
+                    text: "중도인출금 신청",
+                    handler: "handleOption1",
+                  },
+                  { text: "만기보험금 신청 방법", handler: "handleOption1" },
+                  {
+                    text: "해약 방법",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "보험료가 통장잔고 미인출 문의",
+                    handler: "handleOption3",
+                  },
+                  {
+                    text: "자동이체 신청/변경/해지",
+                    handler: "handleOption1",
+                  },
+                  {
+                    text: "자동이체 해지시 보험료 납입",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "적립금과 해약환급금의 차이",
+                    handler: "handleOption8",
+                  },
+                ]}
+              />
+            </div>
+          </div>
         ),
       },
       {

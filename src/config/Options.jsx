@@ -59,11 +59,13 @@ const Options = (props) => {
   ));
 
   return (
-    <div class="mb-14 max-h-[200px] w-[600px]">
-      <div class="mb-1 ml-2 mt-4 text-right text-xs font-normal leading-[18px] text-Text-Alternative">
+    <div class="mb-4 w-[600px]">
+      <div class="mb-1 mt-4 h-full w-full pr-[12px] text-right text-xs font-normal leading-[18px] text-Text-Alternative">
         선택하신 항목에 대해 상세하게 알려드릴께요!
       </div>
-      <div class="row-auto  ml-[170px] w-[450px] ">{optionsMarkup}</div>
+      <div class="row-auto  ml-[154px] h-auto max-h-[200px] w-[450px] bg-blue-300">
+        {optionsMarkup}
+      </div>
     </div>
   );
 };

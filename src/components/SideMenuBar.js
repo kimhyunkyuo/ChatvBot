@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const SideMenuBar = ({ onMenuItemClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showSubMenus, setShowSubMenus] = useState(false);
-  const [activeMenuItem, setActiveMenuItem] = useState("quickGuide");
+  const [activeMenuItem, setActiveMenuItem] = useState("retrieveInfo");
 
   const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
 

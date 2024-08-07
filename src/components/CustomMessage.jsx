@@ -244,7 +244,7 @@ const CustomMessage = (props) => {
     case "cancellationRefund":
       return (
         <div>
-          <div className="mt-[60px] flex items-center">
+          <div className="mt-[20px] flex items-center">
             <div class="flex">
               <img
                 src={botAvatar}
@@ -282,7 +282,7 @@ const CustomMessage = (props) => {
     case "pdfViewer":
       // content = (
       return (
-        <div className="mb-[60px] flex items-center">
+        <div className="mb-[28px] flex items-center">
           <div class="flex">
             <img
               src={botAvatar}
