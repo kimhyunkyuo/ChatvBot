@@ -22,6 +22,7 @@ const MyChatBot = ({ config }) => {
         messageParser={MessageParser}
         actionProvider={ActionProvider}
         placeholderText="궁금한 사항이 있으시다면 적어주십시오."
+        disableScrollToBottom
       />
     </div>
   );
