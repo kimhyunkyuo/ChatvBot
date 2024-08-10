@@ -5,7 +5,7 @@ const SideMenuBar = ({ onMenuItemClick }) => {
   const [showSubMenus, setShowSubMenus] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("retrieveInfo");
 
-  const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
+  const close_icon = process.env.PUBLIC_URL + "/assets/close_button_14.png";
 
   const handleMenuItemClick = (menuItem) => {
     setActiveMenuItem(menuItem);
@@ -63,26 +63,6 @@ const SideMenuBar = ({ onMenuItemClick }) => {
         >
           상품소개
         </div>
-        {/* <div
-          className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
-            activeMenuItem === "simulation"
-              ? "bg-Fill-Gray-Normal text-Text-Normal"
-              : "hover:bg-Fill-Gray-Normal hover:text-Text-Normal"
-          }`}
-          onClick={() => handleMenuItemClick("simulation")}
-        >
-          시뮬레이션
-        </div> */}
-        {/* <div
-          className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
-            activeMenuItem === "savingsLevel"
-              ? "bg-Fill-Gray-Normal text-Text-Normal"
-              : "hover:bg-Fill-Gray-Normal hover:text-Text-Normal"
-          }`}
-          onClick={() => handleMenuItemClick("savingsLevel")}
-        >
-          저축, 저금 수준
-        </div> */}
         <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "postSubscription"
@@ -93,16 +73,6 @@ const SideMenuBar = ({ onMenuItemClick }) => {
         >
           고객센터
         </div>
-        {/* <div
-          className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
-            activeMenuItem === "retrieveInfo"
-              ? "bg-Fill-Gray-Normal text-Text-Normal"
-              : "hover:bg-Fill-Gray-Normal hover:text-Text-Normal"
-          }`}
-          onClick={() => handleMenuItemClick("retrieveInfo")}
-        >
-          상담 정보 불러오기
-        </div> */}
       </div>
     </div>
   );

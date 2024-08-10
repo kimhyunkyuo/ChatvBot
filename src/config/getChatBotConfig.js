@@ -1,10 +1,11 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import CustomMessage from "../components/CustomMessage";
 import Options from "./Options";
-import botAvatar from "../assets/avatar.png";
 import UserMessage from "../components/UserChatMessage";
 
 const getChatBotConfig = (menuItem) => {
+  // const botAvatar = process.env.PUBLIC_URL + "/assets/avatarcopy.png";
+  const botAvatar = process.env.PUBLIC_URL + "/assets/avatar.png";
   const config = {
     lang: "ko",
     botName: "전문적인 상담사 똑디",
@@ -22,7 +23,6 @@ const getChatBotConfig = (menuItem) => {
             width: "50px",
             height: "50px",
             borderRadius: "50%",
-            backgroundColor: "yellow",
           }}
         />
       ),
@@ -98,21 +98,23 @@ const getChatBotConfig = (menuItem) => {
         widgetFunc: (props) => (
           <>
             <CustomMessage {...props} messageType="productIntro" />
-            <Options
-              {...props}
-              options={[
-                { text: "iM 암보험 무배당 2404", handler: "handleOption1" },
-                {
-                  text: "iM 간편정기보험 무배당 2404",
-                  handler: "handleOption2",
-                },
-                { text: "iM 저축보험 무배당 2404", handler: "handleOption3" },
-                {
-                  text: "iM 교통상해보험 무배당 2404",
-                  handler: "handleOption4",
-                },
-              ]}
-            />
+            <div class="h-[120px] w-full">
+              <Options
+                {...props}
+                options={[
+                  { text: "iM 암보험 무배당 2404", handler: "handleOption1" },
+                  {
+                    text: "iM 간편정기보험 무배당 2404",
+                    handler: "handleOption2",
+                  },
+                  { text: "iM 저축보험 무배당 2404", handler: "handleOption3" },
+                  {
+                    text: "iM 교통상해보험 무배당 2404",
+                    handler: "handleOption4",
+                  },
+                ]}
+              />
+            </div>
           </>
         ),
       },
@@ -134,7 +136,6 @@ const getChatBotConfig = (menuItem) => {
           <CustomMessage {...props} messageType="cancellationRefund" />
         ),
       },
-      // Add other widgets here
     ],
     customStyles: {
       botMessageBox: {
@@ -170,7 +171,6 @@ const getChatBotConfig = (menuItem) => {
         }),
       ];
       break;
-    // Add other cases for other menu items
     default:
       config.initialMessages = [
         createChatBotMessage(

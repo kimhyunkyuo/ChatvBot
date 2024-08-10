@@ -129,8 +129,6 @@ const RenewableGraph = () => {
               />
             </LineChart>
           </ResponsiveContainer>
-          {/* <div className="x-axis-label">Period</div> */}
-          {/* <div className="y-axis-label">Amount</div> */}
         </div>
       </div>
     </div>

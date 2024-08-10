@@ -36,21 +36,8 @@ const Options = (props) => {
 
   const optionsMarkup = options.map((option, index) => (
     <button
-      style={{
-        margin: "5px",
-        marginRight: "8px",
-        padding: "10px",
-        backgroundColor: "var( --Primary-Normal)",
-        border: "none",
-        borderRadius: "12px",
-        color: "var(--Text-Normal)",
-        fontWeight: "600",
-        cursor: "pointer",
-        height: "40px",
-        maxWidth: "250px",
-        marginRight: "16px",
-        float: "right",
-      }}
+      class="float-right m-[5px] mr-4 h-10 max-w-[250px] cursor-pointer rounded-xl border-none
+    bg-Primary-Normal p-[10px] font-semibold text-Text-Normal"
       key={index}
       onClick={() => props.actionProvider[option.handler]()}
     >
@@ -63,9 +50,7 @@ const Options = (props) => {
       <div class="mb-1 mt-4 h-full w-full pr-[12px] text-right text-xs font-normal leading-[18px] text-Text-Alternative">
         선택하신 항목에 대해 상세하게 알려드릴께요!
       </div>
-      <div class="row-auto  ml-[154px] h-auto max-h-[200px] w-[450px] bg-blue-300">
-        {optionsMarkup}
-      </div>
+      <div class="ml-[154px]">{optionsMarkup}</div>
     </div>
   );
 };

@@ -43,8 +43,8 @@ class ActionProvider {
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",
-      pdfUrl: "/assets/avatar.pdf",
-      pdfName: "avatar.pdf",
+      // pdfUrl: "/assets/avatar.pdf",
+      // pdfName: "avatar.pdf",
       withAvatar: false,
     });
 

@@ -11,9 +11,10 @@ Modal.setAppElement("#root");
 const PdfViewer = ({ fileUrl }) => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const [isOpen, setIsOpen] = useState(false);
-  const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
-  const search_icon = process.env.PUBLIC_URL + "/Search_icon_13.5.png";
-  const download_icon = process.env.PUBLIC_URL + "/download_icon_13.5.png";
+  const close_icon = process.env.PUBLIC_URL + "/assets/close_button_14.png";
+  const search_icon = process.env.PUBLIC_URL + "/assets/Search_icon_13.5.png";
+  const download_icon =
+    process.env.PUBLIC_URL + "/assets/download_icon_13.5.png";
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
@@ -21,7 +22,7 @@ const PdfViewer = ({ fileUrl }) => {
   const downloadFile = () => {
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "240328 가입시알아두실사항_DT.pdf"; // Change the file name as needed
+    link.download = "240328 가입시알아두실사항_DT.pdf";
     link.click();
   };
 

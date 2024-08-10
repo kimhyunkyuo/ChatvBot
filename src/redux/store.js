@@ -1,21 +1,9 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
+import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer, persistStore } from "redux-persist";
-// import authReducer from "./authSlice";
-// import navbarReducer from "./navbarSlice";
-// import tabsReducer from "./tabsSlice";
-// import main from "./modules/mainSlice";
-// import searchReducer from "./searchSlice";
-// import customerTypesReducer from "./customerTypeSlice";
-// import contractReducer from "./modules/contractSlice";
-const reducers = combineReducers({
-  //   auth: authReducer,
-  //   navbar: navbarReducer,
-  //   search: searchReducer,
-  //   tabs: tabsReducer,
-  //   customerTypes: customerTypesReducer,
-});
+
+const reducers = combineReducers({});
 const persistConfig = {
   key: "root",
   storage,
@@ -34,7 +22,6 @@ export const store = configureStore({
       ],
     },
   }),
-  // ... other store setup options
 });
 
 export const persistor = persistStore(store);

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
 import Main from "../pages/Main";
 
-import botAvatar from "../assets/avatar.png";
 const DraggableModalButton = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
+  const close_icon = process.env.PUBLIC_URL + "/assets/close_button_14.png";
+  const botAvatar = process.env.PUBLIC_URL + "/assets/avatar.png";
 
   const toggleModal = () => {
     if (!isDragging) {
@@ -53,14 +53,13 @@ const DraggableModalButton = () => {
         onStop={handleStop}
       >
         <button
-          onMouseDown={(e) => e.preventDefault()} // Prevent default to avoid text selection and other default behaviors
+          onMouseDown={(e) => e.preventDefault()}
           onClick={toggleModal}
           style={{
             position: "fixed",
-            right: "10px", // Positioned at the right end
+            right: "10px",
             top: `calc(66.67%)`,
             zIndex: 100,
-            // backgroundColor: "red",
             borderRadius: "50%",
             width: "50px",
             height: "50px",
@@ -89,12 +88,10 @@ const DraggableModalButton = () => {
             transform: "translate(-50%, -50%)",
             zIndex: 9,
             backgroundColor: "var(--Background-Tertiary)",
-            // backgroundColor: "#fff",
             boxShadow: "0 0 10px rgba(0,0,0,0.5)",
             borderRadius: "10px",
             width: "830px",
             height: "600px",
-            // paddingBottom: "64px",
             overflow: "scroll",
             overflowX: "hidden",
             overflowY: "hidden",

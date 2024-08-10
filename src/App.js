@@ -1,22 +1,13 @@
 import "./App.css";
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import React, { useEffect } from "react";
-import { useSelector, useDispatch, Provider } from "react-redux";
+import React from "react";
 
 const Login = lazy(() => import("./pages/Login"));
 const Main = lazy(() => import("./pages/Main"));
 const Test = lazy(() => import("./pages/Test"));
-// const Password = lazy(() => import("./pages/Password"));
-// const Signup = lazy(() => import("./pages/Signup/Signup"));
 
 function App() {
-  const dispatch = useDispatch();
-
-  // 보호된 경로에 대한 조건부 렌더링 함수
-  // const renderProtected = (Component) => {
-  //   return isLoggedIn ? <Component /> : <Login />;
-  // };
   return (
     <Suspense>
       <div className="App">

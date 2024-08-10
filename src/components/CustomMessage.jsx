@@ -1,38 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./MyChatBot.css";
-import botAvatar from "../assets/avatar.png";
 import PdfViewer from "./PdfViewer";
 import RenewableGraph from "./RenewableGraph";
 import NonRenewableGraph from "./NonRenewableGraph";
-import ActionProvider from "../config/ActionProvider";
-import { useContext } from "react";
-import { ChatbotContext } from "react-chatbot-kit";
 
 const CustomMessage = (props) => {
   const { messageType, message } = props;
   const [currentTime, setCurrentTime] = useState("");
-  const right_arrow = process.env.PUBLIC_URL + "/right_arrow.png";
-  const pdf_icon = process.env.PUBLIC_URL + "/PDF_icon.png";
-  const search_icon = process.env.PUBLIC_URL + "/Search_icon_13.5.png";
-  const download_icon = process.env.PUBLIC_URL + "/download_icon_13.5.png";
-  const samplePdf = process.env.PUBLIC_URL + "/abc.pdf";
-
-  // const { createChatBotMessage, setState } = useContext(ChatbotContext);
-  // const actionProvider = new ActionProvider(createChatBotMessage, setState);
-
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const pdf_icon = process.env.PUBLIC_URL + "/assets/Pdf_icon_26.png";
+  const botAvatar = process.env.PUBLIC_URL + "/assets/avatar.png";
+  const samplePdf = process.env.PUBLIC_URL + "/assets/test.pdf";
 
   console.log(message);
-  const handlePreviewClick = () => {
-    setModalIsOpen(true);
-  };
-
-  const pdfUrl = "/assets/avatar.pdf";
-  const pdfName = "240328 가입시알아두실사항_DT.pdf";
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
 
   useEffect(() => {
     const updateCurrentTime = () => {
@@ -64,11 +43,11 @@ const CustomMessage = (props) => {
             <img
               src={botAvatar}
               alt="Bot Avatar"
+              s
               style={{
                 width: "50px",
                 height: "50px",
                 borderRadius: "50%",
-                backgroundColor: "yellow",
               }}
             />
             <div>
@@ -94,68 +73,47 @@ const CustomMessage = (props) => {
                 >
                   보험 상품에 대한 FAQ입니다.
                 </div>
-                {/* <div class="mb-2 flex items-center justify-center rounded-lg bg-Fill-Gray-Assistive pr-2">
-                  <input
-                    class="h-[30px] w-[376px] bg-Fill-Gray-Assistive p-2 text-xs font-normal leading-[14px] text-Text-Assistive"
-                    placeholder="찾고싶은 약관이 있다면 검색하세요"
-                  ></input>
-                  <img
-                    src={search_icon}
-                    class="h-[14px] w-[14px] cursor-pointer"
-                  />
-                </div> */}
                 <div class=" h-[280px] w-[376px] rounded-lg bg-Fill-Gray-Assistive ">
-                  <div
-                    class="flex cursor-pointer items-center justify-between  hover:bg-slate-200"
-                    // onClick={actionProvider.handleOption}
-                  >
+                  <div class="flex cursor-pointer items-center justify-between  hover:bg-slate-200">
                     <div class="mt-1 flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       마케팅 동의에 대한 철회는 어떻게 하나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       중도인출금 신청은 어떻게 하나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       만기보험금 신청은 어떻게 하나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       해약은 어떻게 하나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       보험료가 통장잔고 부족으로 미납되었습니다. 언제까지
                       청구되나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       자동이체 신청/변경/해지는 어떻게 하나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       자동 아체를 해지하면 어떻게 보험료를 납입하나요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                   <div class="flex cursor-pointer items-center justify-between hover:bg-slate-200">
                     <div class="flex h-[34px] p-2 text-xs font-normal leading-[18px]  text-Text-Normal hover:font-semibold">
                       적립금과 해약환급금의 차이는 무엇인가요?
                     </div>
-                    {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                   </div>
                 </div>
               </div>
@@ -201,7 +159,6 @@ const CustomMessage = (props) => {
                     </div>
                     iM 암보험 무배당 2024
                   </div>
-                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
                 <hr class=" text-Line-Gray-Assistive" />
                 <div class="flex cursor-pointer items-center justify-between py-2 ">
@@ -211,7 +168,6 @@ const CustomMessage = (props) => {
                     </div>
                     iM 간편정기보험 무배당 2024
                   </div>
-                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
                 <hr class=" text-Line-Gray-Assistive" />
                 <div class="flex cursor-pointer items-center justify-between py-2 ">
@@ -221,7 +177,6 @@ const CustomMessage = (props) => {
                     </div>
                     iM 저축보험 무배당 2024
                   </div>
-                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
                 <hr class="text-Line-Gray-Assistive" />
                 <div class="flex cursor-pointer items-center justify-between py-2 ">
@@ -231,7 +186,6 @@ const CustomMessage = (props) => {
                     </div>
                     iM 교통상해보험 무배당 2024
                   </div>
-                  {/* <img class="mr-4 h-[10px] w-[6px]" src={right_arrow} /> */}
                 </div>
               </div>
             </div>
@@ -240,7 +194,6 @@ const CustomMessage = (props) => {
       );
     case "simulation":
       return <div>시뮬레이션@@</div>;
-    // Add other cases as needed
     case "cancellationRefund":
       return (
         <div>
@@ -280,7 +233,6 @@ const CustomMessage = (props) => {
         </div>
       );
     case "pdfViewer":
-      // content = (
       return (
         <div className="mb-[28px] flex items-center">
           <div class="flex">
@@ -327,12 +279,12 @@ const CustomMessage = (props) => {
           </div>
         </div>
       );
-      // );
       break;
     default:
       content = <div>{message}</div>; // Display the message prop
       break;
   }
+
   // 빈 메시지 박스를 렌더링하지 않음
   if (props.message === "") {
     return null;

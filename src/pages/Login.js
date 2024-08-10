@@ -1,7 +1,6 @@
 // import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import DraggableModalButton from "../components/DraggableModalButton";
 
 const Login = () => {
@@ -13,11 +12,8 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
-
   return (
     <div>
-      {/* <Navbar /> */}
       <div>
         <div>
           <div class="mx-auto flex h-[64px] w-[800px] items-center justify-center">
@@ -25,9 +21,6 @@ const Login = () => {
             <div className="flex cursor-default items-center justify-center text-base font-semibold">
               상담 챗봇 이용하기
             </div>
-            {/* <button>
-              <img src={close_icon} />
-            </button> */}
           </div>
           <hr class="mb-10 h-1 w-full" />
           <div class="flex items-center justify-center">

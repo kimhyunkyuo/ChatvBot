@@ -72,10 +72,7 @@ const NonRenewableGraph = () => {
             <svg width="16" height="16">
               <circle cx="8" cy="8" r="4" fill={entry.color} />
             </svg>
-            <span
-              //   className="legend-text"
-              class="text-[10px] font-normal leading-[14px] text-[#272520]"
-            >
+            <span class="text-[10px] font-normal leading-[14px] text-[#272520]">
               {entry.value}
             </span>
           </div>
@@ -141,8 +138,6 @@ const NonRenewableGraph = () => {
               />
             </LineChart>
           </ResponsiveContainer>
-          {/* <div className="x-axis-label">Period</div> */}
-          {/* <div className="y-axis-label">Amount</div> */}
         </div>
       </div>
     </div>
