@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
-import Main from "../pages/Main";
+import Main from "../../pages/Main";
 
 const DraggableModalButton = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -70,47 +70,17 @@ const DraggableModalButton = () => {
           <img
             src={botAvatar}
             alt="Bot Avatar"
-            style={{
-              width: "50px",
-              height: "50px",
-              borderRadius: "50%",
-              pointerEvents: "none", // Make image unclickable
-            }}
+            className="chatbot-avatar"
+            class="pointer-events-none"
           />
         </button>
       </Draggable>
       {isModalOpen && (
-        <div
-          style={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 9,
-            backgroundColor: "var(--Background-Tertiary)",
-            boxShadow: "0 0 10px rgba(0,0,0,0.5)",
-            borderRadius: "10px",
-            width: "830px",
-            height: "600px",
-            overflow: "scroll",
-            overflowX: "hidden",
-            overflowY: "hidden",
-          }}
-        >
+        <div class="bg-background-tertiary fixed left-1/2 top-1/2 z-[9] h-[600px] w-[830px] -translate-x-1/2 -translate-y-1/2 transform overflow-scroll overflow-x-hidden overflow-y-hidden rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.5)]">
           <Main />
           <button
             onClick={toggleModal}
-            style={{
-              position: "absolute",
-              top: "1px",
-              right: "10px",
-              border: "none",
-              borderRadius: "50%",
-              width: "30px",
-              height: "64px",
-              alignItems: "center",
-              cursor: "pointer",
-            }}
+            class="absolute right-[10px] top-[1px] flex h-[64px] w-[30px] cursor-pointer items-center rounded-full border-none"
           >
             <img src={close_icon} />
           </button>

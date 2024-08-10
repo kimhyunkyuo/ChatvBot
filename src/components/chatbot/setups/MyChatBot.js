@@ -1,9 +1,8 @@
-// MyChatBot.js
 import React, { useState, useEffect } from "react";
 import Chatbot from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
-import MessageParser from "../config/MessageParser.js";
-import ActionProvider from "../config/ActionProvider.js";
+import MessageParser from "../../../config/MessageParser";
+import ActionProvider from "../../../config/ActionProvider";
 import "./MyChatBot.css";
 
 const MyChatBot = ({ config }) => {
@@ -22,7 +21,6 @@ const MyChatBot = ({ config }) => {
         messageParser={MessageParser}
         actionProvider={ActionProvider}
         placeholderText="궁금한 사항이 있으시다면 적어주십시오."
-        disableScrollToBottom
       />
     </div>
   );

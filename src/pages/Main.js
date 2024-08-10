@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import SideMenuBar from "../components/SideMenuBar";
-import MyChatBot from "../components/MyChatBot";
-import { getChatBotConfig } from "../config/getChatBotConfig";
+import MyChatBot from "../components/chatbot/setups/MyChatBot";
+import { ChatBotConfig } from "../config/ChatBotConfig";
 
 const Main = () => {
-  const [botConfig, setBotConfig] = useState(getChatBotConfig(""));
+  const [botConfig, setBotConfig] = useState(ChatBotConfig(""));
   useEffect(() => {
     console.log("Current bot config:", botConfig);
   }, [botConfig]);
   const handleMenuItemClick = (menuItem) => {
-    setBotConfig(getChatBotConfig(menuItem));
+    setBotConfig(ChatBotConfig(menuItem));
   };
 
   return (

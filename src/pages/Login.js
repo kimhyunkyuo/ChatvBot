@@ -1,7 +1,7 @@
 // import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import DraggableModalButton from "../components/DraggableModalButton";
+import DraggableModalButton from "../components/chatbot/DraggableModalButton";
 
 const Login = () => {
   const name = useRef("");
@@ -42,7 +42,6 @@ const Login = () => {
                 ref={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="고객님의 이름을 입력해주세요."
-                // autoFocus
                 class="h-10 w-[480px] rounded-lg border border-[#D1D0CC] bg-[#F4F3F1] p-3 text-sm font-normal text-[#878682]"
               />
               <div class="mb-1 mt-3 flex cursor-default text-base font-semibold">
@@ -56,7 +55,6 @@ const Login = () => {
                 ref={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="고객님의 연락처를 입력해주세요."
-                // autoFocus
                 class="h-10 w-[480px] rounded-lg border border-[#D1D0CC] bg-[#F4F3F1] p-3 text-sm font-normal text-[#878682]"
               />
               <div class="mt-4 flex cursor-pointer text-sm font-normal text-[#878682] underline">

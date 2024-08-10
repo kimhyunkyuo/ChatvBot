@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import SideMenuBar from "../components/SideMenuBar";
-import MyChatBot from "../components/MyChatBot";
-import { getChatBotConfig } from "../config/getChatBotConfig"; // This function returns the config based on menu item
+import { ChatBotConfig } from "../config/ChatBotConfig"; // This function returns the config based on menu item
 import { Document, Page } from "react-pdf";
 const Test = () => {
-  const [botConfig, setBotConfig] = useState(getChatBotConfig(""));
+  const [botConfig, setBotConfig] = useState(ChatBotConfig(""));
   useEffect(() => {
     console.log("Current bot config:", botConfig);
   }, [botConfig]);
   const handleMenuItemClick = (menuItem) => {
-    setBotConfig(getChatBotConfig(menuItem));
+    setBotConfig(ChatBotConfig(menuItem));
   };
 
   const close_icon = process.env.PUBLIC_URL + "/close_button_14.png";
@@ -29,7 +28,6 @@ const Test = () => {
             </button>
           </header>
           <hr class="mb-[-3px] h-1 w-full" />
-          {/* <MyChatBot config={botConfig} /> */}
         </div>
       </div>
     </div>

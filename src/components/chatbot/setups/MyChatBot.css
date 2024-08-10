@@ -104,3 +104,34 @@
   cursor: pointer;
   margin-left: 8px;
 }
+
+.chatbot-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.current-time {
+  margin-left: 0.5rem;
+  margin-top: 0.125rem;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--Text-Alternative);
+}
+/* flex cursor-pointer items-center justify-between hover:bg-slate-200"> */
+.quickguide-container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+.quickguide-item {
+  display: flex;
+  height: 34px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--Text-Normal);
+}

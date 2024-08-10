@@ -12,7 +12,7 @@ const PdfViewer = ({ fileUrl }) => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const [isOpen, setIsOpen] = useState(false);
   const close_icon = process.env.PUBLIC_URL + "/assets/close_button_14.png";
-  const search_icon = process.env.PUBLIC_URL + "/assets/Search_icon_13.5.png";
+  const search_icon = process.env.PUBLIC_URL + "/assets/search_icon_13.5.png";
   const download_icon =
     process.env.PUBLIC_URL + "/assets/download_icon_13.5.png";
 
