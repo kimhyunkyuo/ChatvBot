@@ -5,24 +5,18 @@ const ChatbotHeader = () => {
   const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
-    const updateCurrentTime = () => {
-      const now = new Date();
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const isAm = hours < 12;
-      const formattedHours = isAm ? hours : hours - 12;
-      const ampm = isAm ? "오전" : "오후";
-      const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const isAm = hours < 12;
+    const formattedHours = isAm ? hours : hours - 12;
+    const ampm = isAm ? "오전" : "오후";
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
 
-      setCurrentTime(
-        `${ampm} ${formattedHours === 0 ? 12 : formattedHours}:${formattedMinutes}`,
-      );
-    };
-
-    updateCurrentTime();
-    const timerId = setInterval(updateCurrentTime, 60000);
-
-    return () => clearInterval(timerId);
+    setCurrentTime(
+      `${ampm} ${formattedHours === 0 ? 12 : formattedHours}:${formattedMinutes}`,
+    );
+    // The dependency array is empty, so this effect runs only once when the component mounts
   }, []);
 
   return (
