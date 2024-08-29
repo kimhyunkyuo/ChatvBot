@@ -50,7 +50,7 @@ const Options = (props) => {
       <div class="mb-1 mt-4 h-full w-full pr-[12px] text-right text-xs font-normal leading-[18px] text-Text-Alternative">
         선택하신 항목에 대해 상세하게 알려드릴께요!
       </div>
-      <div class="ml-[154px]">{optionsMarkup}</div>
+      <div class="ml-[110px]">{optionsMarkup}</div>
     </div>
   );
 };

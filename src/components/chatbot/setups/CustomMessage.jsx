@@ -81,7 +81,7 @@ const CustomMessage = (props) => {
       );
     case "pdfViewer":
       return (
-        <div className="mb-[28px] flex items-center">
+        <div className="mb-[42px] flex items-center">
           <div class="flex">
             <img src={botAvatar} alt="Bot Avatar" className="chatbot-avatar" />
             <div>

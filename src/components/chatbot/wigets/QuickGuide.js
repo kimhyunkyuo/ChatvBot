@@ -18,7 +18,7 @@ const QuickGuide = () => {
         <div className="quickguide-item ">해약은 어떻게 하나요?</div>
       </div>
       <div className="quickguide-container ">
-        <div className="quickguide-item ">
+        <div className="quickguide-item w-[350px]">
           보험료가 통장잔고 부족으로 미납되었습니다. 언제까지 청구되나요?
         </div>
       </div>
