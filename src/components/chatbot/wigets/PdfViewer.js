@@ -12,7 +12,7 @@ const PdfViewer = ({ fileUrl }) => {
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const [isOpen, setIsOpen] = useState(false);
   const close_icon = process.env.PUBLIC_URL + "/assets/close_button_14.png";
-  const search_icon = process.env.PUBLIC_URL + "/assets/search_icon_13.5.png";
+  const search_icon = process.env.PUBLIC_URL + "/assets/search_icon13.5.png";
   const download_icon =
     process.env.PUBLIC_URL + "/assets/download_icon_13.5.png";
 
@@ -40,6 +40,7 @@ const PdfViewer = ({ fileUrl }) => {
           다운로드
         </button>
       </div>
+
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
@@ -65,7 +66,7 @@ const PdfViewer = ({ fileUrl }) => {
         <Worker
           workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}
         >
-          <div style={{ height: "100%" }}>
+          <div style={{ height: "100%", zIndex: 1000 }}>
             <Viewer fileUrl={fileUrl} plugins={[defaultLayoutPluginInstance]} />
           </div>
         </Worker>

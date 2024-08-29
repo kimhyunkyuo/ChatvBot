@@ -9,7 +9,7 @@ import ChatbotHeader from "../ChatbotHeader";
 
 const CustomMessage = (props) => {
   const { messageType, message } = props;
-  const pdf_icon = process.env.PUBLIC_URL + "/assets/pdf_icon_26.png";
+  const pdf_icon = process.env.PUBLIC_URL + "/assets/pdf_icon26.png";
   const botAvatar = process.env.PUBLIC_URL + "/assets/avatar.png";
   const samplePdf = process.env.PUBLIC_URL + "/assets/test.pdf";
 
@@ -86,7 +86,7 @@ const CustomMessage = (props) => {
             <img src={botAvatar} alt="Bot Avatar" className="chatbot-avatar" />
             <div>
               <ChatbotHeader />
-              <div class="ml-2 h-[150px] w-[420px] rounded-[0_12px_12px_12px] bg-white p-3">
+              <div class="ml-2 h-[160px] w-[460px] rounded-[0_12px_12px_12px] bg-white p-3">
                 <div class="mb-1 flex text-base font-semibold leading-6 text-Text-Normal">
                   iM 암보험 무배당 2404
                 </div>
@@ -94,7 +94,7 @@ const CustomMessage = (props) => {
                   iM 암보험 무배당 2404 가입시 알아두실 사항에 대해
                   소개하겠습니다.
                 </div>
-                <div class="flex h-[66px] w-[394px] items-center rounded-lg bg-Fill-Gray-Assistive p-3">
+                <div class="flex h-[66px] w-[434px] items-center rounded-lg bg-Fill-Gray-Assistive p-3">
                   <div>
                     <img src={pdf_icon} />
                   </div>
