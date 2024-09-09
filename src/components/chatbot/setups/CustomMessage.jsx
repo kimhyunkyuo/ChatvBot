@@ -18,25 +18,24 @@ const CustomMessage = (props) => {
   let content;
   switch (messageType) {
     case "quickGuide":
-      return (
-        <div className="flex items-center">
-          <div class="flex">
-            <img src={botAvatar} alt="Bot Avatar" className="chatbot-avatar" />
-            <div>
-              <ChatbotHeader />
-              <div class="ml-2 h-[360px] w-[400px] bg-white p-3">
-                <div class="mb-1 flex text-base font-semibold leading-[24px] text-Text-Normal">
-                  퀵 가이드
-                </div>
-                <div class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative">
-                  보험 상품에 대한 FAQ입니다.
-                </div>
-                <QuickGuide />
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+      return "";
+      // <div className="flex items-center">
+      //   <div class="flex">
+      //     <img src={botAvatar} alt="Bot Avatar" className="chatbot-avatar" />
+      //     <div>
+      //       <ChatbotHeader />
+      //       <div class="ml-2 h-[360px] w-[400px] bg-white p-3">
+      //         <div class="mb-1 flex text-base font-semibold leading-[24px] text-Text-Normal">
+      //           퀵 가이드
+      //         </div>
+      //         <div class="mb-3 flex text-sm font-normal leading-5 text-Text-Alternative">
+      //           보험 상품에 대한 FAQ입니다.
+      //         </div>
+      //         <QuickGuide />
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>
     case "productIntro":
       return (
         <div className="flex items-center">

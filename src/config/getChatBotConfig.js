@@ -1,6 +1,7 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import CustomMessage from "../components/CustomMessage";
 import Options from "./Options";
+import Options2 from "./Options2";
 import UserMessage from "../components/UserChatMessage";
 
 const getChatBotConfig = (menuItem) => {
@@ -55,16 +56,47 @@ const getChatBotConfig = (menuItem) => {
       {
         widgetName: "quickGuide",
         widgetFunc: (props) => (
-          <div class="mt-[20px] h-[634px] w-full">
+          <div class="mt-[20px] h-full w-full">
             <CustomMessage {...props} messageType="quickGuide" />
-            <div class="h-[240px] w-full">
-              <Options
+            <div class="h-full w-full">
+              {/* <Options
                 {...props}
                 options={[
                   { text: "마케팅 동의 철회", handler: "handleOption1" },
                   {
                     text: "중도인출금 신청",
                     handler: "handleOption1",
+                  },
+                  { text: "만기보험금 신청 방법", handler: "handleOption1" },
+                  {
+                    text: "해약 방법",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "보험료가 통장잔고 미인출 문의",
+                    handler: "handleOption3",
+                  },
+                  {
+                    text: "자동이체 신청/변경/해지",
+                    handler: "handleOption1",
+                  },
+                  {
+                    text: "자동이체 해지시 보험료 납입",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "적립금과 해약환급금의 차이",
+                    handler: "handleOption8",
+                  },
+                ]}
+              /> */}
+              <Options2
+                {...props}
+                options={[
+                  { text: "마케팅 동의 철회", handler: "handleOption1" },
+                  {
+                    // text: "중도인출금 신청",
+                    // handler: "handleOption1",
                   },
                   { text: "만기보험금 신청 방법", handler: "handleOption1" },
                   {
