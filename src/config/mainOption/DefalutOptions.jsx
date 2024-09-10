@@ -1,6 +1,6 @@
 import React from "react";
 
-const Options = (props) => {
+const DefalutOptions = (props) => {
   const options = props.options || [
     {
       text: "Option 1",
@@ -36,7 +36,7 @@ const Options = (props) => {
 
   const optionsMarkup = options.map((option, index) => (
     <button
-      class="float-right m-[5px] mr-4 h-10 max-w-[250px] cursor-pointer rounded-xl border-none
+      class="float-left m-[5px] mr-4 h-10 max-w-[250px] cursor-pointer rounded-xl border-none
     bg-Primary-Normal p-[10px] font-semibold text-Text-Normal"
       key={index}
       onClick={() => props.actionProvider[option.handler]()}
@@ -47,12 +47,12 @@ const Options = (props) => {
 
   return (
     <div class="mb-4 w-[600px]">
-      <div class="mb-1 mt-4 h-full w-full pr-[12px] text-right text-xs font-normal leading-[18px] text-Text-Alternative">
-        선택하신 항목에 대해 상세하게 알려드릴께요!
+      <div class="mb-1 ml-[56px] mt-4 h-full w-full pr-[12px] text-left text-xs font-normal leading-[18px] text-Text-Alternative">
+        카테고리를 선택해주세요
       </div>
-      <div class="ml-[110px]">{optionsMarkup}</div>
+      <div class="ml-[50px] mr-[100px]">{optionsMarkup}</div>
     </div>
   );
 };
 
-export default Options;
+export default DefalutOptions;

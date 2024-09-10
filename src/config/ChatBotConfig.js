@@ -1,8 +1,12 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import CustomMessage from "../components/chatbot/setups/CustomMessage";
 import UserMessage from "../components/chatbot/setups/UserChatMessage";
-import Options2 from "./Options2";
-import Options from "./Options";
+import Options3 from "./Options3";
+import MainContractsOptions from "./mainOption/MainContractsOptions";
+import MainPaymentOptions from "./mainOption/MainPaymentOptions";
+import MainTerminateOptions from "./mainOption/MainTerminateOptions";
+import MainPersonalOptions from "./mainOption/MainPersonalOptions";
+import DefalutOptions from "./mainOption/DefalutOptions";
 import "../components/chatbot/setups/MyChatBot.css";
 
 const ChatBotConfig = (menuItem) => {
@@ -32,14 +36,149 @@ const ChatBotConfig = (menuItem) => {
         widgetFunc: (props) => (
           <div class="h-[60px] w-full">
             {" "}
-            <Options
+            <DefalutOptions
               {...props}
               options={[
                 {
-                  text: "인터넷 보험 상품 목록",
-                  handler: "handleInsuranceList",
+                  text: "보험 계약 및 가입 관련",
+                  handler: "InsuranceContracts",
                 },
-                { text: "퀵 가이드", handler: "handleQuickGuide" },
+                {
+                  text: "보험료 및 납입 관리",
+                  handler: "InsurancePayment",
+                },
+                {
+                  text: "보험료 지급 및 해지 처리",
+                  handler: "InsuranceTerminate",
+                },
+                {
+                  text: "개인정보 및 증명 서류",
+                  handler: "PersonalInformation",
+                },
+              ]}
+            />
+          </div>
+        ),
+      },
+      {
+        widgetName: "InsuranceContractsWidget",
+        widgetFunc: (props) => (
+          <div class="flex h-[60px] w-full flex-col">
+            {" "}
+            <MainContractsOptions
+              {...props}
+              options={[
+                {
+                  text: "보험가입",
+                  handler: "InsuranceContracts",
+                },
+                {
+                  text: "보험증권",
+                  handler: "InsurancePayment",
+                },
+                {
+                  text: "계약사항",
+                  handler: "InsuranceTerminate",
+                },
+                {
+                  text: "보험수익자",
+                  handler: "PersonalInformation",
+                },
+                {
+                  text: "수익자",
+                  handler: "PersonalInformation",
+                },
+                {
+                  text: "마케팅 동의",
+                  handler: "PersonalInformation",
+                },
+              ]}
+            />
+          </div>
+        ),
+      },
+      {
+        widgetName: "InsuranceTerminateWidget",
+        widgetFunc: (props) => (
+          <div class="flex h-[60px] w-full flex-col">
+            {" "}
+            <MainTerminateOptions
+              {...props}
+              options={[
+                {
+                  text: "보험료 납입",
+                  handler: "InsuranceContracts",
+                },
+                {
+                  text: "자동이체",
+                  handler: "InsurancePayment",
+                },
+                {
+                  text: "적립금",
+                  handler: "InsuranceTerminate",
+                },
+              ]}
+            />
+          </div>
+        ),
+      },
+      {
+        widgetName: "InsuranceTerminateWidget",
+        widgetFunc: (props) => (
+          <div class="flex h-[60px] w-full flex-col">
+            {" "}
+            <MainPaymentOptions
+              {...props}
+              options={[
+                {
+                  text: "보험금 청구",
+                  handler: "InsuranceContracts",
+                },
+                {
+                  text: "지급금 우편접수",
+                  handler: "InsurancePayment",
+                },
+                {
+                  text: "만기보험금",
+                  handler: "InsuranceTerminate",
+                },
+                {
+                  text: "해약환급금",
+                  handler: "InsuranceTerminate",
+                },
+                {
+                  text: "해약",
+                  handler: "InsuranceTerminate",
+                },
+                {
+                  text: "중도인출",
+                  handler: "InsuranceTerminate",
+                },
+                {
+                  text: "청약철회",
+                  handler: "InsuranceTerminate",
+                },
+              ]}
+            />
+          </div>
+        ),
+      },
+      {
+        widgetName: "PersonalInformationWidget",
+        widgetFunc: (props) => (
+          <div class="flex h-[60px] w-full flex-col">
+            {" "}
+            <MainPersonalOptions
+              {...props}
+              options={[
+                {
+                  text: "개인정보",
+                  handler: "InsuranceContracts",
+                },
+                {
+                  text: "증명서",
+                  handler: "InsurancePayment",
+                },
               ]}
             />
           </div>
@@ -51,7 +190,7 @@ const ChatBotConfig = (menuItem) => {
           <div class="mt-[20px] h-[434px] w-full">
             <CustomMessage {...props} messageType="quickGuide" />
             <div class="h-[240px] w-full">
-              <Options2
+              <Options3
                 {...props}
                 options={[
                   { text: "마케팅 동의 철회", handler: "handleOption1" },
@@ -92,7 +231,7 @@ const ChatBotConfig = (menuItem) => {
           <>
             <CustomMessage {...props} messageType="productIntro" />
             <div class="h-[120px] w-full">
-              <Options
+              <DefalutOptions
                 {...props}
                 options={[
                   { text: "iM 암보험 무배당 2404", handler: "handleOption1" },

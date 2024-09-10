@@ -1,7 +1,7 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import CustomMessage from "../components/CustomMessage";
-import Options from "./Options";
-import Options2 from "./Options2";
+import DefalutOptions from "./mainOption/DefalutOptions";
+import Options2 from "./Options3";
 import UserMessage from "../components/UserChatMessage";
 
 const getChatBotConfig = (menuItem) => {
@@ -40,7 +40,7 @@ const getChatBotConfig = (menuItem) => {
         widgetFunc: (props) => (
           <div class="h-[60px] w-full">
             {" "}
-            <Options
+            <DefalutOptions
               {...props}
               options={[
                 {
@@ -59,7 +59,7 @@ const getChatBotConfig = (menuItem) => {
           <div class="mt-[20px] h-full w-full">
             <CustomMessage {...props} messageType="quickGuide" />
             <div class="h-full w-full">
-              {/* <Options
+              {/* <DefalutOptions
                 {...props}
                 options={[
                   { text: "마케팅 동의 철회", handler: "handleOption1" },
@@ -131,7 +131,7 @@ const getChatBotConfig = (menuItem) => {
           <>
             <CustomMessage {...props} messageType="productIntro" />
             <div class="h-[120px] w-full">
-              <Options
+              <DefalutOptions
                 {...props}
                 options={[
                   { text: "iM 암보험 무배당 2404", handler: "handleOption1" },

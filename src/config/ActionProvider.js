@@ -40,6 +40,51 @@ class ActionProvider {
     }));
   };
 
+  InsuranceContracts = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsuranceContractsWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  InsurancePayment = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsurancePaymentWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  InsuranceTerminate = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsuranceTerminateWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  PersonalInformation = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "PersonalInformationWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",

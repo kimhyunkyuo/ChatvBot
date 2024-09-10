@@ -1,7 +1,7 @@
 import React from "react";
 import ChatbotHeader from "../components/chatbot/ChatbotHeader";
 
-const Options2 = (props) => {
+const Options3 = (props) => {
   const botAvatar = process.env.PUBLIC_URL + "/assets/avatar.png";
   const rightArrow = process.env.PUBLIC_URL + "/assets/right_arrow_18.png";
   //  const
@@ -52,8 +52,8 @@ const Options2 = (props) => {
   ));
 
   return (
-    <div class="mb-4 w-[600px]">
-      <div class="mb-1 mt-4 h-full w-full pr-[12px] text-right text-xs font-normal leading-[18px] text-Text-Alternative">
+    <div class="mb-4 w-[300px]">
+      <div class="mb-1 mt-4 h-full w-full pl-[22px]  text-xs font-normal leading-[18px] text-Text-Alternative">
         선택하신 항목에 대해 상세하게 알려드릴께요!
       </div>
       {/* <div class="  bg-Primary-Dark"> */}
@@ -61,7 +61,7 @@ const Options2 = (props) => {
         <img src={botAvatar} alt="Bot Avatar" className="chatbot-avatar" />
         <div>
           <ChatbotHeader />
-          <div class="ml-2 flex h-[336px] w-[400px] flex-col bg-white p-3">
+          <div class="ml-2 flex h-[236px] w-[400px] flex-col bg-white p-3">
             <div class="mb-3 flex text-sm font-normal ">
               질문을 선택해주세요
             </div>
@@ -74,4 +74,4 @@ const Options2 = (props) => {
   );
 };
 
-export default Options2;
+export default Options3;
