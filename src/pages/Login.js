@@ -26,10 +26,10 @@ const Login = () => {
           <div class="flex items-center justify-center">
             <body>
               <div class="mb-2 flex cursor-default text-[22px] font-semibold">
-                고객님의 정보를 입력해주세요.
+                이 사이트는 현재 임시로 설정된 상태입니다.
               </div>
               <div class="mb-10 flex cursor-default text-sm font-normal text-[#878682]">
-                고객님이 입력하신 정보는 챗봇 정보를 불러올 수 있습니다.
+                iM라이프 페이지가 이곳에 배치될 예정입니다.
               </div>
               <div class="mb-1 flex cursor-default text-base  font-semibold">
                 이름
@@ -65,7 +65,7 @@ const Login = () => {
           <footer class="flex items-center justify-center">
             <button
               className="mt-[58px] h-12 w-[480px] rounded-2xl bg-[#FFCB51]"
-              onClick={() => navigate("/main")}
+              // onClick={() => navigate("/main")}
             >
               시작하기
             </button>
