@@ -85,6 +85,19 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
+
+  SideContracts = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SideContractsWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",

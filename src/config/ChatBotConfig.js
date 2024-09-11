@@ -6,6 +6,7 @@ import MainContractsOptions from "./mainOption/MainContractsOptions";
 import MainPaymentOptions from "./mainOption/MainPaymentOptions";
 import MainTerminateOptions from "./mainOption/MainTerminateOptions";
 import MainPersonalOptions from "./mainOption/MainPersonalOptions";
+import sideContractOptions from "./sideOption/sideContractOptions";
 import DefalutOptions from "./mainOption/DefalutOptions";
 import "../components/chatbot/setups/MyChatBot.css";
 
@@ -70,7 +71,7 @@ const ChatBotConfig = (menuItem) => {
               options={[
                 {
                   text: "보험가입",
-                  handler: "InsuranceContracts",
+                  handler: "SideContracts",
                 },
                 {
                   text: "보험증권",
@@ -98,11 +99,11 @@ const ChatBotConfig = (menuItem) => {
         ),
       },
       {
-        widgetName: "InsuranceTerminateWidget",
+        widgetName: "InsurancePaymentWidget",
         widgetFunc: (props) => (
           <div class="flex h-[60px] w-full flex-col">
             {" "}
-            <MainTerminateOptions
+            <MainPaymentOptions
               {...props}
               options={[
                 {
@@ -127,7 +128,7 @@ const ChatBotConfig = (menuItem) => {
         widgetFunc: (props) => (
           <div class="flex h-[60px] w-full flex-col">
             {" "}
-            <MainPaymentOptions
+            <MainTerminateOptions
               {...props}
               options={[
                 {
@@ -185,9 +186,43 @@ const ChatBotConfig = (menuItem) => {
         ),
       },
       {
+        widgetName: "SideContractsWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full bg-red-500">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <sideContractOptions
+                {...props}
+                options={[
+                  { text: "마케팅 동의 철회", handler: "handleOption1" },
+                  { text: "만기보험금 신청 방법", handler: "handleOption1" },
+                  {
+                    text: "해약 방법",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "보험료가 통장잔고 미인출 문의",
+                    handler: "handleOption3",
+                  },
+                  {
+                    text: "자동이체 신청/변경/해지",
+                    handler: "handleOption1",
+                  },
+                  {
+                    text: "자동이체 해지시 보험료 납입",
+                    handler: "handleOption2",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
         widgetName: "quickGuide",
         widgetFunc: (props) => (
-          <div class="mt-[20px] h-[434px] w-full">
+          <div class="mt-[220px] h-[434px] w-full">
             <CustomMessage {...props} messageType="quickGuide" />
             <div class="h-[240px] w-full">
               <Options3

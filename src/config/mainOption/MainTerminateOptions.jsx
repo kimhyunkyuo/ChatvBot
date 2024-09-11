@@ -52,7 +52,7 @@ const MainTerminateOptions = (props) => {
     <div>
       <div class="w-full">
         <div class="react-chatbot-kit-user-chat-message mt-4">
-          보험료 및 납입 관리
+          보험료 지급 및 해지 처리
         </div>
       </div>
       <div className="mb-[42px] mt-[20px] flex items-center">
@@ -61,7 +61,9 @@ const MainTerminateOptions = (props) => {
           <div>
             <ChatbotHeader />
             <div className="react-chatbot-kit-chat-bot-message">
-              <div>보험료 및 납입 관리에 관련된 어떤 정보를 찾고 계신가요?</div>
+              <div>
+                보험료 지급 및 해지 처리에 관련된 어떤 정보를 찾고 계신가요?
+              </div>
             </div>
             <div class="mb-4 w-[600px]">
               <div class="mb-1 ml-[12px] mt-2 h-full w-full  text-left text-xs font-normal leading-[18px] text-Text-Alternative">
