@@ -28,7 +28,7 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           >
             질문목록
           </div>
-          <img src={close_icon} class="h-[14px] w-[14px] cursor-pointer" />
+          {/* <img src={close_icon} class="h-[14px] w-[14px] cursor-pointer" /> */}
         </div>
         <div class="px-2">
           <hr class="mb-3" />
@@ -44,6 +44,14 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           홈
         </div>
         <div
+          className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold 
+            hover:bg-Fill-Gray-Normal hover:text-Text-Normal
+          `}
+          onClick={() => handleMenuItemClick("retrieveInfo")}
+        >
+          새 채팅
+        </div>
+        {/* <div
           className={`mb-1 flex h-[36px] w-[184px] cursor-pointer items-center p-2 font-semibold ${
             activeMenuItem === "quickGuide"
               ? "bg-Fill-Gray-Normal text-Text-Normal"
@@ -72,7 +80,7 @@ const SideMenuBar = ({ onMenuItemClick }) => {
           onClick={() => handleMenuItemClick("postSubscription")}
         >
           고객센터
-        </div>
+        </div> */}
       </div>
     </div>
   );
