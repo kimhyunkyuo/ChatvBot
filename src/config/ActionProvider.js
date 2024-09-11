@@ -40,52 +40,6 @@ class ActionProvider {
     }));
   };
 
-  InsuranceContracts = () => {
-    const message = this.createChatBotMessage("", {
-      widget: "InsuranceContractsWidget",
-      withAvatar: false,
-    });
-
-    this.setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
-    }));
-  };
-  InsurancePayment = () => {
-    const message = this.createChatBotMessage("", {
-      widget: "InsurancePaymentWidget",
-      withAvatar: false,
-    });
-
-    this.setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
-    }));
-  };
-  InsuranceTerminate = () => {
-    const message = this.createChatBotMessage("", {
-      widget: "InsuranceTerminateWidget",
-      withAvatar: false,
-    });
-
-    this.setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
-    }));
-  };
-
-  PersonalInformation = () => {
-    const message = this.createChatBotMessage("", {
-      widget: "PersonalInformationWidget",
-      withAvatar: false,
-    });
-
-    this.setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
-    }));
-  };
-
   SideContracts = () => {
     const message = this.createChatBotMessage("", {
       widget: "SideContractsWidget",
@@ -145,6 +99,30 @@ class ActionProvider {
       ...prev,
       messages: [...prev.messages, message],
     }));
+  };
+
+  // Helper function to set the currently selected widget without affecting other UI elements
+  setCurrentWidget = (widgetName) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      currentWidget: widgetName, // Track the selected widget
+    }));
+  };
+
+  InsuranceContracts = () => {
+    this.setCurrentWidget("InsuranceContractsWidget");
+  };
+
+  InsurancePayment = () => {
+    this.setCurrentWidget("InsurancePaymentWidget");
+  };
+
+  InsuranceTerminate = () => {
+    this.setCurrentWidget("InsuranceTerminateWidget");
+  };
+
+  PersonalInformation = () => {
+    this.setCurrentWidget("PersonalInformationWidget");
   };
 }
 
