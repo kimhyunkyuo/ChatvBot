@@ -51,6 +51,61 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
+  SidePolicy = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SidePolicyWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  SideContractDetails = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SideContractDetailsWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  SideInsuranceBeneficiary = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SideInsuranceBeneficiaryWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  SideBeneficiary = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SideBeneficiaryWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  MarketingConsent = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "MarketingConsentWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
 
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {

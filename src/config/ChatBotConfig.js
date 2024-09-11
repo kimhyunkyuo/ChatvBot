@@ -6,7 +6,7 @@ import MainContractsOptions from "./mainOption/MainContractsOptions";
 import MainPaymentOptions from "./mainOption/MainPaymentOptions";
 import MainTerminateOptions from "./mainOption/MainTerminateOptions";
 import MainPersonalOptions from "./mainOption/MainPersonalOptions";
-import sideContractOptions from "./sideOption/sideContractOptions";
+import SideContractsOptions from "./sideOption/SideContractsOptions";
 import DefalutOptions from "./mainOption/DefalutOptions";
 import "../components/chatbot/setups/MyChatBot.css";
 
@@ -71,23 +71,23 @@ const ChatBotConfig = (menuItem) => {
                   },
                   {
                     text: "보험증권",
-                    handler: "InsurancePayment",
+                    handler: "SidePolicy",
                   },
                   {
                     text: "계약사항",
-                    handler: "InsuranceTerminate",
+                    handler: "SideContractDetails",
                   },
                   {
                     text: "보험수익자",
-                    handler: "PersonalInformation",
+                    handler: "SideInsuranceBeneficiary",
                   },
                   {
                     text: "수익자",
-                    handler: "PersonalInformation",
+                    handler: "SideBeneficiary",
                   },
                   {
                     text: "마케팅 동의",
-                    handler: "PersonalInformation",
+                    handler: "MarketingConsent",
                   },
                 ]}
               />
@@ -168,30 +168,148 @@ const ChatBotConfig = (menuItem) => {
       {
         widgetName: "SideContractsWidget",
         widgetFunc: (props) => (
-          <div class=" mt-[20px] h-[434px] w-full bg-red-500">
+          <div class=" mt-[20px] h-[434px] w-full">
             {/* <CustomMessage {...props} messageType="quickGuide" /> */}
             <div class="h-[240px] w-full">
               <CustomMessage {...props} messageType="quickGuide" />
-              <sideContractOptions
+              <SideContractsOptions
                 {...props}
                 options={[
-                  { text: "마케팅 동의 철회", handler: "handleOption1" },
-                  { text: "만기보험금 신청 방법", handler: "handleOption1" },
                   {
-                    text: "해약 방법",
-                    handler: "handleOption2",
-                  },
-                  {
-                    text: "보험료가 통장잔고 미인출 문의",
-                    handler: "handleOption3",
-                  },
-                  {
-                    text: "자동이체 신청/변경/해지",
+                    text: "보험가입 시 준비해야 할 것이 무엇인가요?",
                     handler: "handleOption1",
                   },
                   {
-                    text: "자동이체 해지시 보험료 납입",
+                    text: "제가 아닌 다른 사람을 피보험자로 할 수 없나요?",
+                    handler: "handleOption1",
+                  },
+                  {
+                    text: "보험가입 후 보험증권은 언제 받아볼 수 있나요?",
                     handler: "handleOption2",
+                  },
+                  {
+                    text: "보험가입 후 언제부터 보장이 되나요?",
+                    handler: "handleOption3",
+                  },
+                  {
+                    text: "수익자 지정은 어떻게 하나요?",
+                    handler: "handleOption1",
+                  },
+                  {
+                    text: "보험가입금액이 무엇인가요?",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "보험가입이 되지 않을 경우도 있나요?",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "보험 가입은 언제든 가능 한건가요?",
+                    handler: "handleOption2",
+                  },
+                  {
+                    text: "보험가입 시 한도초과로 나오는 것은 왜그렇죠?",
+                    handler: "handleOption2",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "SidePolicyWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "보험증권을 다시 받고 싶은데 어떻게 신청하면 되나요?",
+                    handler: "handleOption1",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "SideContractDetailsWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "보험가입 후 가입한 보험의 계약사항은 어디서 확인 할 수 있나요?",
+                    handler: "handleOption1",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "SideInsuranceBeneficiaryWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "보험수익자 지정,변경 약정 동의가 무엇인가요?",
+                    handler: "handleOption1",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "SideBeneficiaryWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "수익자를 법정상속인으로 지정할 경우 상속 순위는 어떻게 되나요?",
+                    handler: "handleOption1",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "MarketingConsentWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "마케팅 동의에 대한 철회는 어떻게 하나요?",
+                    handler: "handleOption1",
                   },
                 ]}
               />
