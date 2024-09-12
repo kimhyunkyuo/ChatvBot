@@ -107,6 +107,29 @@ class ActionProvider {
     }));
   };
 
+  InsurancePreparations = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsurancePreparationsWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  ReApplicationInsurancePolicy = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "ReApplicationInsurancePolicyWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",
