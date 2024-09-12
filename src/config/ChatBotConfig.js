@@ -181,35 +181,35 @@ const ChatBotConfig = (menuItem) => {
                   },
                   {
                     text: "제가 아닌 다른 사람을 피보험자로 할 수 없나요?",
-                    handler: "handleOption1",
+                    handler: "InsureAnotherPerson",
                   },
                   {
                     text: "보험가입 후 보험증권은 언제 받아볼 수 있나요?",
-                    handler: "handleOption2",
+                    handler: "InsurancePolicy",
                   },
                   {
                     text: "보험가입 후 언제부터 보장이 되나요?",
-                    handler: "handleOption3",
+                    handler: "InsurancePolicyAfterPurchase",
                   },
                   {
                     text: "수익자 지정은 어떻게 하나요?",
-                    handler: "handleOption1",
+                    handler: "SpecifyingBeneficiaries",
                   },
                   {
                     text: "보험가입금액이 무엇인가요?",
-                    handler: "handleOption2",
+                    handler: "AmountInsurance",
                   },
                   {
                     text: "보험가입이 되지 않을 경우도 있나요?",
-                    handler: "handleOption2",
+                    handler: "Uninsured",
                   },
                   {
                     text: "보험 가입은 언제든 가능 한건가요?",
-                    handler: "handleOption2",
+                    handler: "WhenPurchaseInsurance",
                   },
                   {
                     text: "보험가입 시 한도초과로 나오는 것은 왜그렇죠?",
-                    handler: "handleOption2",
+                    handler: "LimitInsurance",
                   },
                 ]}
               />
@@ -330,6 +330,68 @@ const ChatBotConfig = (menuItem) => {
             {...props}
             messageType="ReApplicationInsurancePolicy"
           />
+        ),
+      },
+      {
+        widgetName: "InsureAnotherPersonWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props} 
+          messageType="InsureAnotherPerson" />
+        ),
+      },
+      
+      {
+        widgetName: "InsurancePolicyWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="InsurancePolicy" />
+        ),
+      },
+  
+      {
+        widgetName: "InsurancePolicyAfterPurchaseWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="InsurancePolicyAfterPurchase" />
+        ),
+      },
+
+      {
+        widgetName: "SpecifyingBeneficiariesWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="SpecifyingBeneficiaries" />
+        ),
+      },
+
+      {
+        widgetName: "AmountInsuranceWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="AmountInsurance" />
+        ),
+      },
+
+      {
+        widgetName: "UninsuredWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="Uninsured" />
+        ),
+      },
+
+      {
+        widgetName: "WhenPurchaseInsuranceWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="WhenPurchaseInsurance" />
+        ),
+      },
+      {
+        widgetName: "LimitInsuranceWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="LimitInsurance" />
         ),
       },
       {

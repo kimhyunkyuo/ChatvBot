@@ -136,6 +136,246 @@ const CustomMessage = (props) => {
         </div>
       );
 
+      case "InsureAnotherPerson":
+        return (
+          <div>
+            <div class="mb-[30px] mt-[-40px] w-full">
+              <div class="react-chatbot-kit-user-chat-message">
+                제가 아닌 다른 사람을 피보험자로 할 수 없나요?
+              </div>
+            </div>
+            <div className="mb-10 flex items-center">
+              <div class="flex">
+                <img
+                  src={botAvatar}
+                  alt="Bot Avatar"
+                  className="chatbot-avatar"
+                />
+                <div>
+                  <ChatbotHeader />
+                  <div className="react-chatbot-kit-chat-bot-message">
+                    <div>디지털 채널을 이용한 보험 가입은 보험계약자와 피보험자가 동일한 경우만 가입이 가능해요.</div>
+                    <div>
+                     보험계약자의 경우 계약성립(완료) 이후 피보험자이 동의 등을 얻어 변경이 가능하나, 피보험자의 변경은 불가해요.
+                    </div>
+                    <div>
+                      {" "}
+                      ※ 보험계약자 변경 신청은 콜센터(☎ 1588-4770)로 해주세요.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+        case "InsurancePolicy":
+          return (
+            <div>
+              <div class="mb-[30px] mt-[-40px] w-full">
+                <div class="react-chatbot-kit-user-chat-message">
+                  보험가입 후 보험증권은 언제 받아볼 수 있나요?
+                </div>
+              </div>
+              <div className="mb-10 flex items-center">
+                <div class="flex">
+                  <img
+                    src={botAvatar}
+                    alt="Bot Avatar"
+                    className="chatbot-avatar"
+                  />
+                  <div>
+                    <ChatbotHeader />
+                    <div className="react-chatbot-kit-chat-bot-message">
+                      <div>청약(가입)완료 후 보험가입이 승낙된 경우, 등록하신 고객님의 카카오톡 메시지 또는 LMS로 발송되요.</div>
+                      <div>
+                       가입 이후에는 당사 콜센터 및 모바일 고객창구에서 재발급 신청 가능해요.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );  
+
+          case "InsurancePolicyAfterPurchase":
+            return (
+              <div>
+                <div class="mb-[30px] mt-[-40px] w-full">
+                  <div class="react-chatbot-kit-user-chat-message">
+                    보험가입 후 언제부터 보장이 되나요?
+                  </div>
+                </div>
+                <div className="mb-10 flex items-center">
+                  <div class="flex">
+                    <img
+                      src={botAvatar}
+                      alt="Bot Avatar"
+                      className="chatbot-avatar"
+                    />
+                    <div>
+                      <ChatbotHeader />
+                      <div className="react-chatbot-kit-chat-bot-message">
+                        <div>청약(가입)마지막 단계인 초회 보험료 납입 완료한 시점부터 보장을 받으실 수 있어요.</div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );  
+            
+            case "SpecifyingBeneficiaries":
+              return (
+                <div>
+                  <div class="mb-[30px] mt-[-40px] w-full">
+                    <div class="react-chatbot-kit-user-chat-message">
+                      수익자 지정은 어떻게 하나요?
+                    </div>
+                  </div>
+                  <div className="mb-10 flex items-center">
+                    <div class="flex">
+                      <img
+                        src={botAvatar}
+                        alt="Bot Avatar"
+                        className="chatbot-avatar"
+                      />
+                      <div>
+                        <ChatbotHeader />
+                        <div className="react-chatbot-kit-chat-bot-message">
+                          <div>디지털 채널을 이용한 보험 가입 시 수익자는 법정상속인으로 지정이 되요.
+                          </div>
+                          <div>다만, 계약성립(완료) 이후 수익자를 추가하거나 변경할 수 있어요.
+                          </div>
+                          <div>※ 수익자 변경은 보험금 지급사유가 발생하기 전 까지만 가능하며, 자세한 문의는 콜센터(☎ 1588-4770)로 문의해주세요.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );  
+             
+              case "AmountInsurance":
+                return (
+                  <div>
+                    <div class="mb-[30px] mt-[-40px] w-full">
+                      <div class="react-chatbot-kit-user-chat-message">
+                        보험가입금액이 무엇인가요?
+                      </div>
+                    </div>
+                    <div className="mb-10 flex items-center">
+                      <div class="flex">
+                        <img
+                          src={botAvatar}
+                          alt="Bot Avatar"
+                          className="chatbot-avatar"
+                        />
+                        <div>
+                          <ChatbotHeader />
+                          <div className="react-chatbot-kit-chat-bot-message">
+                            <div>생명보험의 보험가입금액은 법률 및 보험약관에서 정한 보험사고가 발생한 경우에 지급되는 보험회사와 보험계약자간의 합의된 약정 금액을 말해요.
+                            </div>
+                            <div>예를 들면 사망에 대한 보장금액이 1억원일 경우 "1억원"이 보험가입금액이 되요.
+                            </div>
+                            <div>또한, 종신보험의 주계약이나, 정기보험의 주계약의 경우 가입금액과 보장금액이 동일하나, 암보험 등은 보장금액과 가입금액이 다를 수 있어요.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );  
+                
+                case "Uninsured":
+                return (
+                  <div>
+                    <div class="mb-[30px] mt-[-40px] w-full">
+                      <div class="react-chatbot-kit-user-chat-message">
+                        보험가입이 되지 않을 경우도 있나요?
+                      </div>
+                    </div>
+                    <div className="mb-10 flex items-center">
+                      <div class="flex">
+                        <img
+                          src={botAvatar}
+                          alt="Bot Avatar"
+                          className="chatbot-avatar"
+                        />
+                        <div>
+                          <ChatbotHeader />
+                          <div className="react-chatbot-kit-chat-bot-message">
+                            <div>보험회사는 피보험자에 대한 계약 심사를 진행하여 인수가 불가할 경우에는 승낙을 거절 할 수 있어요.
+                            </div>
+                            <div>회사는 계약의 청약(가입)신청을 받고, 제1회 보험료를 받은 경우에 건강진단을 받지 않는 계약은 청약(가입)일, 진단계약은 진단일(재진단의 경우에는 최종 진단일)부터 30일 이내에 승낙 또는 거절하여야 합니다.
+                            </div>
+                            <div>승낙을 거절한 경우에는 보험료를 반환해드리고, 보험계약자에게 거절 사실과 거절 사유를 안내해드립니다.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );  
+                     
+                case "WhenPurchaseInsurance":
+                return (
+                  <div>
+                    <div class="mb-[30px] mt-[-40px] w-full">
+                      <div class="react-chatbot-kit-user-chat-message">
+                        보험 가입은 언제든 가능 한건가요?
+                      </div>
+                    </div>
+                    <div className="mb-10 flex items-center">
+                      <div class="flex">
+                        <img
+                          src={botAvatar}
+                          alt="Bot Avatar"
+                          className="chatbot-avatar"
+                        />
+                        <div>
+                          <ChatbotHeader />
+                          <div className="react-chatbot-kit-chat-bot-message">
+                            <div>당사 디지털 채널에서의 보험 가입은 오전7시 ~ 오후 11시까지 가능해요.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );  
+                
+                case "LimitInsurance":
+                return (
+                  <div>
+                    <div class="mb-[30px] mt-[-40px] w-full">
+                      <div class="react-chatbot-kit-user-chat-message">
+                        보험가입 시 한도초과로 나오는 것은 왜그렇죠?
+                      </div>
+                    </div>
+                    <div className="mb-10 flex items-center">
+                      <div class="flex">
+                        <img
+                          src={botAvatar}
+                          alt="Bot Avatar"
+                          className="chatbot-avatar"
+                        />
+                        <div>
+                          <ChatbotHeader />
+                          <div className="react-chatbot-kit-chat-bot-message">
+                            <div>회사별로 피보험자의 연령, 직업 운전 등의 위험에 따라 보장 급부별 가입할 수 있는 한도의 제한이 있으며, 한도가 초과된다면 가입할 수 없으며, 상세한 내용은 ________________로 문의해 주시기 바래요.
+                            </div> <br/>
+                            <div>※ 연금저축은 다른 금융기관에 가입하신 연금저축계좌 「퇴직연금계좌(DC, IRP)의 자기부담금 포함)」의 연간 납입보험료가 1,800만원이 초과할 경우 가입이 제한되요.
+                            </div><br/>
+                            <div>※ 각 회사에 가입하신 내역은 「한국 신용정보원(http://www.credit4u.or.kr)」에서 본인이 직접 조회가 가능해요.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );  
+
     case "productIntro":
       return (
         <div className="flex items-center">

@@ -130,6 +130,102 @@ class ActionProvider {
     }));
   };
 
+  InsureAnotherPerson = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsureAnotherPersonWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  InsurancePolicy = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsurancePolicyWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  InsurancePolicyAfterPurchase = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsurancePolicyAfterPurchaseWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  
+  SpecifyingBeneficiaries = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SpecifyingBeneficiariesWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  AmountInsurance = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "AmountInsuranceWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  Uninsured = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "UninsuredWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  WhenPurchaseInsurance = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "WhenPurchaseInsuranceWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  LimitInsurance = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "LimitInsuranceWidget",
+      withAvatar: false,
+    });
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",
