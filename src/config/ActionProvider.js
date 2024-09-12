@@ -226,6 +226,51 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
+  
+  SideInsuranceBeneficiaryConsent = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "SideInsuranceBeneficiaryConsentWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  LegalBeneficiary = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "LegalBeneficiaryWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  MarketingConsentCancel = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "MarketingConsentCancelWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  AfterSideContractDetails = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "AfterSideContractDetailsWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",

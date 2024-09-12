@@ -367,7 +367,8 @@ const CustomMessage = (props) => {
                             </div> <br/>
                             <div>※ 연금저축은 다른 금융기관에 가입하신 연금저축계좌 「퇴직연금계좌(DC, IRP)의 자기부담금 포함)」의 연간 납입보험료가 1,800만원이 초과할 경우 가입이 제한되요.
                             </div><br/>
-                            <div>※ 각 회사에 가입하신 내역은 「한국 신용정보원(http://www.credit4u.or.kr)」에서 본인이 직접 조회가 가능해요.
+
+                            <div>※ 각 회사에 가입하신 내역은 「한국 신용정보원」 <a href="http://www.credit4u.or.kr"> http://www.credit4u.or.kr </a>에서 본인이 직접 조회가 가능해요.
                             </div>
                           </div>
                         </div>
@@ -375,7 +376,138 @@ const CustomMessage = (props) => {
                     </div>
                   </div>
                 );  
+                case "SideInsuranceBeneficiaryConsent":
+                  return (
+                    <div>
+                      <div class="mb-[30px] mt-[-320px] w-full">
+                        <div class="react-chatbot-kit-user-chat-message">
+                          보험수익자 지정,변경 약정 동의가 무엇인가요?
+                        </div>
+                      </div>
+                      <div className="mb-10 flex items-center">
+                        <div class="flex">
+                          <img
+                            src={botAvatar}
+                            alt="Bot Avatar"
+                            className="chatbot-avatar"
+                          />
+                          <div>
+                            <ChatbotHeader />
+                            <div className="react-chatbot-kit-chat-bot-message">
+                              <div>보험수익자 지정, 변경 약정 동의란,
+                              </div> 
+                              <div>만약의 경우 보험계약자 사망 이후에 신규 계약자를 포함한 상속인들이 보험수익자를 지정 또는 변경할 수 있는 권리를 가질 수 있도록 약정에 동의하는 제도를 말해요.
+                              </div>
+                              <div>만약, 별도의 약정 동의 없이 보험계약자가 사망한 때에는 신규 계약자를 포함한 상속인들이 보험수익자 변경 신청을 하실 수 없어요.
+                              </div>
+                              <div>단, 해당 계약의 상속인 및 피보험자와 현재 보험수익자가 동의한 경우에는 보험수익자 변경이 가능하구요.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
 
+                  case "LegalBeneficiary":
+                    return (
+                      <div>
+                        <div class="mb-[30px] mt-[-320px] w-full">
+                          <div class="react-chatbot-kit-user-chat-message">
+                            수익자를 법정상속인으로 지정할 경우 상속 순위는 어떻게 되나요?
+                          </div>
+                        </div>
+                        <div className="mb-10 flex items-center">
+                          <div class="flex">
+                            <img
+                              src={botAvatar}
+                              alt="Bot Avatar"
+                              className="chatbot-avatar"
+                            />
+                            <div>
+                              <ChatbotHeader />
+                              <div className="react-chatbot-kit-chat-bot-message">
+                              <div>법정상속인은 민법의 재산상속에 대한 규정에 따라서 피보험자의 상속인 중에서 확정되며, 상속 순위상 선순위 상속인이 존재하면 후순위의 상속인은 상속권이 없어요.
+                              </div><br/>
+                                <div>【 상속순위 】<br/>
+                                      ▷ 1순위 : 피상속인의 직계비속(자녀) 및 배우자<br/>
+                                      ▷ 2순위 : 피상속인의 지계존속(부모) 및 배우자<br/>
+                                      ▷ 3순위 : 피상속인의 형제자매<br/>
+                                      ▷ 4순위 : 피상속인의 4촌이내의 방계혈족
+                                </div> <br/>
+                                <div>※ 배우자는 직계비속이 있는 경우에는 직계비속과 같은 순위로 상속인이 되며, 직계비속이 없는 경우에는 직계존속과 같은 순위로 공동상속인이 됩니다.(지계존속도 없으면 단독상속)
+                                </div><br/>
+                                <div>※ 배우자의 상속분은 직계비속 또는 직계존속의 상속분의 1.5배 입니다.
+                                </div><br/>
+                                <div>예) 상속 보험금 1억 / 상속인 : 배우자, 자녀 2명<br/>
+                                      ▷ 배우자 = 1억 x (1.5 / (1.5 + 1.0 + 1.0)) = 42,857,143(원)<br/>
+                                      ▷ 자녀1 = 1억 x (1.0 / (1.5 + 1.0 + 1.0)) = 28,571,429(원)<br/>
+                                      ▷ 자녀2 = 1억 x (1.0 / (1.5 + 1.0 + 1.0)) = 28,571,429(원)
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    );                   
+                    case "MarketingConsentCancel":
+                      return (
+                        <div>
+                          <div class="mb-[30px] mt-[-320px] w-full">
+                            <div class="react-chatbot-kit-user-chat-message">
+                            마케팅 동의에 대한 철회는 어떻게 하나요?
+                            </div>
+                          </div>
+                          <div className="mb-10 flex items-center">
+                            <div class="flex">
+                              <img
+                                src={botAvatar}
+                                alt="Bot Avatar"
+                                className="chatbot-avatar"
+                              />
+                              <div>
+                                <ChatbotHeader />
+                                <div className="react-chatbot-kit-chat-bot-message">
+                                  <div>보콜센터 또는 인터넷 고객창구를 통해서 신청이 가능해요. 
+                                  </div> 
+                                  <div>1. 콜센터(☎1588-4770) * 계약자 본인만 가능
+                                  </div>
+                                  <div>2. 인터넷 고객창구 →고객정보관리
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );                         
+                       
+                      case "AfterSideContractDetails":
+                      return (
+                        <div>
+                          <div class="mb-[30px] mt-[-320px] w-full">
+                            <div class="react-chatbot-kit-user-chat-message">
+                           보험가입 후 보험의 계약사항은 어디서 확인 할 수 있나요?
+                            </div>
+                          </div>
+                          <div className="mb-10 flex items-center">
+                            <div class="flex">
+                              <img
+                                src={botAvatar}
+                                alt="Bot Avatar"
+                                className="chatbot-avatar"
+                              />
+                              <div>
+                                <ChatbotHeader />
+                                <div className="react-chatbot-kit-chat-bot-message">
+                                  <div>계약사항 조회는 [인터넷고객창구 → 계약조회변경 → 나의종합정보]에서 증권번호 별 상세보기를 선택하시면 확인이 가능해요.
+                                  </div> 
+                                
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );     
     case "productIntro":
       return (
         <div className="flex items-center">

@@ -249,7 +249,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "보험가입 후 가입한 보험의 계약사항은 어디서 확인 할 수 있나요?",
-                    handler: "handleOption1",
+                    handler: "AfterSideContractDetails",
                   },
                 ]}
               />
@@ -269,7 +269,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "보험수익자 지정,변경 약정 동의가 무엇인가요?",
-                    handler: "handleOption1",
+                    handler: "SideInsuranceBeneficiaryConsent",
                   },
                 ]}
               />
@@ -289,7 +289,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "수익자를 법정상속인으로 지정할 경우 상속 순위는 어떻게 되나요?",
-                    handler: "handleOption1",
+                    handler: "LegalBeneficiary",
                   },
                 ]}
               />
@@ -309,7 +309,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "마케팅 동의에 대한 철회는 어떻게 하나요?",
-                    handler: "handleOption1",
+                    handler: "MarketingConsentCancel",
                   },
                 ]}
               />
@@ -392,6 +392,38 @@ const ChatBotConfig = (menuItem) => {
         widgetFunc: (props) => (
           <CustomMessage {...props}
            messageType="LimitInsurance" />
+        ),
+      },
+      
+      {
+        widgetName: "SideInsuranceBeneficiaryConsentWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="SideInsuranceBeneficiaryConsent" />
+        ),
+      },
+      
+      {
+        widgetName: "LegalBeneficiaryWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="LegalBeneficiary" />
+        ),
+      },
+      
+      {
+        widgetName: "MarketingConsentCancelWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="MarketingConsentCancel" />
+        ),
+      },
+     
+      {
+        widgetName: "AfterSideContractDetailsWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="AfterSideContractDetails" />
         ),
       },
       {
