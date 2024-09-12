@@ -177,7 +177,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "보험가입 시 준비해야 할 것이 무엇인가요?",
-                    handler: "handleOption1",
+                    handler: "InsurancePreparations",
                   },
                   {
                     text: "제가 아닌 다른 사람을 피보험자로 할 수 없나요?",
@@ -229,7 +229,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "보험증권을 다시 받고 싶은데 어떻게 신청하면 되나요?",
-                    handler: "handleOption1",
+                    handler: "ReApplicationInsurancePolicy",
                   },
                 ]}
               />
@@ -315,6 +315,21 @@ const ChatBotConfig = (menuItem) => {
               />
             </div>
           </div>
+        ),
+      },
+      {
+        widgetName: "InsurancePreparationsWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props} messageType="InsurancePreparations" />
+        ),
+      },
+      {
+        widgetName: "ReApplicationInsurancePolicyWidget",
+        widgetFunc: (props) => (
+          <CustomMessage
+            {...props}
+            messageType="ReApplicationInsurancePolicy"
+          />
         ),
       },
       {
