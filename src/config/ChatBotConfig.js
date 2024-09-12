@@ -102,11 +102,11 @@ const ChatBotConfig = (menuItem) => {
                   },
                   {
                     text: "자동이체",
-                    handler: "InsurancePayment",
+                    handler: "AutomaticWithdrawal",
                   },
                   {
                     text: "적립금",
-                    handler: "InsuranceTerminate",
+                    handler: "ReserveFund",
                   },
                 ]}
               />
@@ -117,31 +117,31 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "보험금 청구",
-                    handler: "InsuranceContracts",
+                    handler: "InsuranceClaims",
                   },
                   {
                     text: "지급금 우편접수",
-                    handler: "InsurancePayment",
+                    handler: "PaymentReceivedMail",
                   },
                   {
                     text: "만기보험금",
-                    handler: "InsuranceTerminate",
+                    handler: "MaturityInsuranceMoney",
                   },
                   {
                     text: "해약환급금",
-                    handler: "InsuranceTerminate",
+                    handler: "CancellationRefund",
                   },
                   {
                     text: "해약",
-                    handler: "InsuranceTerminate",
+                    handler: "cancellation",
                   },
                   {
                     text: "중도인출",
-                    handler: "InsuranceTerminate",
+                    handler: "IntermediateWithdrawal",
                   },
                   {
                     text: "청약철회",
-                    handler: "InsuranceTerminate",
+                    handler: "WithdrawalSubscription",
                   },
                 ]}
               />
@@ -152,11 +152,11 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "개인정보",
-                    handler: "InsuranceContracts",
+                    handler: "PersonalInformation",
                   },
                   {
                     text: "증명서",
-                    handler: "InsurancePayment",
+                    handler: "Certificate",
                   },
                 ]}
               />
