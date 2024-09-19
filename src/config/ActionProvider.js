@@ -270,7 +270,280 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
+  AutomaticWithdrawal = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "AutomaticTransferWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  InsurancePremiumPayment = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsurancePremiumPaymentWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
 
+  WhenInsurancePremiumPayment = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "WhenInsurancePremiumPaymentWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  ChangeAutomaticTransfer = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "ChangeAutomaticTransferWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  TerminationAutomaticTransfer = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "TerminationAutomaticTransferWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  ReserveFund = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "ReserveFundWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  ReserveCancellationRefund = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "ReserveCancellationRefundWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  InsuranceClaims = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "InsuranceClaimsWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  DocumentsInsuranceClaim = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "DocumentsInsuranceClaimWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  PaymentReceivedMail = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "PaymentReceivedMailWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  MailAcceptance = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "MailAcceptanceWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  MaturityInsuranceMoney = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "MaturityInsuranceMoneyWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  ApplicationMaturityInsurance = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "ApplicationMaturityInsuranceWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  CancellationRefund = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "CancellationRefundWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  WhereCancellationRefund = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "WhereCancellationRefundWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  Cancellation = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "CancellationWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  HowCancellation = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "HowCancellationWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  IntermediateWithdrawal = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "IntermediateWithdrawalWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  HowIntermediateWithdrawal = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "HowIntermediateWithdrawalWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  WithdrawalSubscription = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "WithdrawalSubscriptionWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+
+  PossibleWithdrawalSubscription = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "PossibleWithdrawalSubscriptionWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  ImPossibleWithdrawalSubscription = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "ImPossibleWithdrawalSubscriptionWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  PersonalInformations = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "PersonalInformationsWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  }; 
+  WherePersonalInformation = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "WherePersonalInformationWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  
+  Certificate = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "CertificateWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
+  WhereCertificate = () => {
+    const message = this.createChatBotMessage("", {
+      widget: "WhereCertificateWidget",
+      withAvatar: false,
+    });
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, message],
+    }));
+  };
   handleOption1 = () => {
     const message = this.createChatBotMessage("", {
       widget: "pdfViewer",
@@ -282,6 +555,7 @@ class ActionProvider {
       messages: [...prev.messages, message],
     }));
   };
+ 
 
   handleOption2 = () => {
     const message = this.createChatBotMessage("", {

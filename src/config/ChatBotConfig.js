@@ -98,7 +98,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "보험료 납입",
-                    handler: "InsuranceContracts",
+                    handler: "InsurancePremiumPayment",
                   },
                   {
                     text: "자동이체",
@@ -133,7 +133,7 @@ const ChatBotConfig = (menuItem) => {
                   },
                   {
                     text: "해약",
-                    handler: "cancellation",
+                    handler: "Cancellation",
                   },
                   {
                     text: "중도인출",
@@ -152,7 +152,7 @@ const ChatBotConfig = (menuItem) => {
                 options={[
                   {
                     text: "개인정보",
-                    handler: "PersonalInformation",
+                    handler: "PersonalInformations",
                   },
                   {
                     text: "증명서",
@@ -317,6 +317,262 @@ const ChatBotConfig = (menuItem) => {
           </div>
         ),
       },
+      
+      {
+        widgetName: "InsurancePremiumPaymentWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "보험료가 통잔잔고 부족으로 미인출되었습니다. 언제 다시 청구되나요?",
+                    handler: "WhenInsurancePremiumPayment",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+
+      {
+        widgetName: "AutomaticTransferWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "자동이체 신청/변경/해지는 어떻게 하나요?",
+                    handler: "ChangeAutomaticTransfer",
+                  },
+                  {
+                    text: "자동 이체를 해지하면 어떻게 보험료 납입하나요?",
+                    handler: "TerminationAutomaticTransfer",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "ReserveFundWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "적립금과 해약환급금의 차이는 무엇인가요?",
+                    handler: "ReserveCancellationRefund",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "InsuranceClaimsWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "보험금 청구를 위한 신청서류는 어디서 확인 할 수 있나요?",
+                    handler: "DocumentsInsuranceClaim",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "PaymentReceivedMailWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "제지급 우편 접수는 어떻게 하나요?",
+                    handler: "MailAcceptance",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      
+      {
+        widgetName: "MaturityInsuranceMoneyWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "만기보험금 신청은 어떻게 하나요?",
+                    handler: "ApplicationMaturityInsurance",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      
+      {
+        widgetName: "CancellationRefundWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "(해약)해지환급금은 어디서 확인할 수 있나요?",
+                    handler: "WhereCancellationRefund",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      
+      {
+        widgetName: "CancellationWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "해약은 어떻게 하나요?",
+                    handler: "HowCancellation",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      
+      {
+        widgetName: "IntermediateWithdrawalWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "중도인출금 신청은 어떻게 하나요?",
+                    handler: "HowIntermediateWithdrawal",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        widgetName: "WithdrawalSubscriptionWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "청약철회 가능기간 및 신청절차를 알려주세요?",
+                    handler: "PossibleWithdrawalSubscription",
+                  },
+                  {
+                    text: "청약철회가 불가능한 경우는 무엇인가요?",
+                    handler: "ImPossibleWithdrawalSubscription",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      
+      {
+        widgetName: "PersonalInformationsWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "개인정보 변경은 어디서 할 수 있나요?",
+                    handler: "WherePersonalInformation",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
+      
+      {
+        widgetName: "CertificateWidget",
+        widgetFunc: (props) => (
+          <div class=" mt-[20px] h-[434px] w-full">
+            {/* <CustomMessage {...props} messageType="quickGuide" /> */}
+            <div class="h-[240px] w-full">
+              <CustomMessage {...props} messageType="quickGuide" />
+              <SideContractsOptions
+                {...props}
+                options={[
+                  {
+                    text: "각종 증명서 발급은 어디서 할 수 있나요?",
+                    handler: "WhereCertificate",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        ),
+      },
       {
         widgetName: "InsurancePreparationsWidget",
         widgetFunc: (props) => (
@@ -426,6 +682,114 @@ const ChatBotConfig = (menuItem) => {
            messageType="AfterSideContractDetails" />
         ),
       },
+      
+      {
+        widgetName: "WhenInsurancePremiumPaymentWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="WhenInsurancePremiumPayment" />
+        ),
+      },
+      {
+        widgetName: "ChangeAutomaticTransferWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="ChangeAutomaticTransfer" />
+        ),
+      },
+      {
+        widgetName: "TerminationAutomaticTransferWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="TerminationAutomaticTransfer" />
+        ),
+      },
+      {
+        widgetName: "ReserveCancellationRefundWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="ReserveCancellationRefund" />
+        ),
+      },
+      {
+        widgetName: "DocumentsInsuranceClaimWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="DocumentsInsuranceClaim" />
+        ),
+      },
+      
+      {
+        widgetName: "MailAcceptanceWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="MailAcceptance" />
+        ),
+      },
+      
+      {
+        widgetName: "ApplicationMaturityInsuranceWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="ApplicationMaturityInsurance" />
+        ),
+      },
+      
+      {
+        widgetName: "WhereCancellationRefundWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="WhereCancellationRefund" />
+        ),
+      },
+      
+      {
+        widgetName: "HowCancellationWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="HowCancellation" />
+        ),
+      },
+      
+      {
+        widgetName: "HowIntermediateWithdrawalWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="HowIntermediateWithdrawal" />
+        ),
+      },
+      
+      {
+        widgetName: "PossibleWithdrawalSubscriptionWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="PossibleWithdrawalSubscription" />
+        ),
+      },
+      
+      {
+        widgetName: "ImPossibleWithdrawalSubscriptionWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="ImPossibleWithdrawalSubscription" />
+        ),
+      },
+      {
+        widgetName: "WherePersonalInformationWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="WherePersonalInformation" />
+        ),
+      },
+      {
+        widgetName: "WhereCertificateWidget",
+        widgetFunc: (props) => (
+          <CustomMessage {...props}
+           messageType="WhereCertificate" />
+        ),
+      },
+      
+      
       {
         widgetName: "quickGuide",
         widgetFunc: (props) => (
